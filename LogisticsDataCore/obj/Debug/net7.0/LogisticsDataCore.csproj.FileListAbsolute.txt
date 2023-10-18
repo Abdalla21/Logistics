@@ -1,0 +1,11 @@
+C:\Users\abdalla.ahmed\source\repos\LogisticsProject\LogisticsDataCore\bin\Debug\net7.0\LogisticsDataCore.deps.json
+C:\Users\abdalla.ahmed\source\repos\LogisticsProject\LogisticsDataCore\bin\Debug\net7.0\LogisticsDataCore.dll
+C:\Users\abdalla.ahmed\source\repos\LogisticsProject\LogisticsDataCore\bin\Debug\net7.0\LogisticsDataCore.pdb
+C:\Users\abdalla.ahmed\source\repos\LogisticsProject\LogisticsDataCore\obj\Debug\net7.0\LogisticsDataCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abdalla.ahmed\source\repos\LogisticsProject\LogisticsDataCore\obj\Debug\net7.0\LogisticsDataCore.AssemblyInfoInputs.cache
+C:\Users\abdalla.ahmed\source\repos\LogisticsProject\LogisticsDataCore\obj\Debug\net7.0\LogisticsDataCore.AssemblyInfo.cs
+C:\Users\abdalla.ahmed\source\repos\LogisticsProject\LogisticsDataCore\obj\Debug\net7.0\LogisticsDataCore.csproj.CoreCompileInputs.cache
+C:\Users\abdalla.ahmed\source\repos\LogisticsProject\LogisticsDataCore\obj\Debug\net7.0\LogisticsDataCore.dll
+C:\Users\abdalla.ahmed\source\repos\LogisticsProject\LogisticsDataCore\obj\Debug\net7.0\refint\LogisticsDataCore.dll
+C:\Users\abdalla.ahmed\source\repos\LogisticsProject\LogisticsDataCore\obj\Debug\net7.0\LogisticsDataCore.pdb
+C:\Users\abdalla.ahmed\source\repos\LogisticsProject\LogisticsDataCore\obj\Debug\net7.0\ref\LogisticsDataCore.dll

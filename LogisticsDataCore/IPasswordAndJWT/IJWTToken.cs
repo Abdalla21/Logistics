@@ -1,0 +1,15 @@
+﻿using LogisticsDataCore.DTOs;
+using LogisticsDataCore.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LogisticsDataCore.IPasswordAndJWT
+{
+    public interface IJWTToken
+    {
+        public string GetJWTToken(UserResponseDTO userDTO, string PrivateKey);
+    }
+}
