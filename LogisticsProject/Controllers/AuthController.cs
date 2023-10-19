@@ -17,7 +17,7 @@ namespace LogisticsProject.Controllers
     public class AuthController(IConfiguration Configuration, IGenericRepository<User> repository) : ControllerBase
     {
 
-        [HttpPost("register")]
+        [HttpPost()]
         public ActionResult<User> Register(UserRequestDTO userRequestDTO)
         {
             DTOsConverter dTOsConverter = new DTOsConverter();
@@ -42,7 +42,7 @@ namespace LogisticsProject.Controllers
         }
 
 
-        [HttpGet("Roles"), Authorize(Roles = "Admin")]
+        [HttpGet(), Authorize(Roles = "Admin")]
         public ActionResult<List<string>> GetRoles()
         {
             return Ok(UsersRolesConstants.Roles);
