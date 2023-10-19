@@ -5,6 +5,7 @@ using LogisticsDataCore.Models;
 using LogisticsEntity.ModelsAssigner;
 using LogisticsEntity.PasswordAndJWT;
 using LogisticsEntity.PasswordHash;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -28,7 +29,7 @@ namespace LogisticsProject.Controllers
         }
 
 
-        [HttpGet("Roles")]
+        [HttpGet("Roles"), Authorize(Roles = "Admin")]
         public ActionResult<List<string>> GetRoles()
         {
             return Ok(AuthConstants.Roles);

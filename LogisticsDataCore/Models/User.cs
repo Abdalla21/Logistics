@@ -10,8 +10,6 @@ namespace LogisticsDataCore.Models
 
         public required byte[] PasswordHash { get; set; }
 
-        public required byte[] PasswordSalt { get; set; }
-
         public required int Age { get; set; }
 
         public required string Email { get; set; }

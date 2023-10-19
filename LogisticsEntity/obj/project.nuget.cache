@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0l+jopC0kG5TGBhOUan45gP9XVSGDDyhCTBOvMSn3VTzSOPu0RiQXIAQS63LAnzu0ACDTr53rRGUrVHSVOmPeA==",
+  "dgSpecHash": "MKpfKwk+Olz6hHNLEg+ckQiEKCXWUGlnZVafY4tkm2ojwP1ngNL4jjIjfNBnT1x+tOGQR69M9imeetPtDupzzA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProject\\LogisticsEntity\\LogisticsEntity.csproj",
+  "projectFilePath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsEntity\\LogisticsEntity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProject\\LogisticsEntity\\LogisticsEntity.csproj": {}
+    "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsEntity\\LogisticsEntity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProject\\LogisticsDataCore\\LogisticsDataCore.csproj": {
+    "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsDataCore\\LogisticsDataCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProject\\LogisticsDataCore\\LogisticsDataCore.csproj",
+        "projectUniqueName": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsDataCore\\LogisticsDataCore.csproj",
         "projectName": "LogisticsDataCore",
-        "projectPath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProject\\LogisticsDataCore\\LogisticsDataCore.csproj",
+        "projectPath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsDataCore\\LogisticsDataCore.csproj",
         "packagesPath": "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProject\\LogisticsDataCore\\obj\\",
+        "outputPath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsDataCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -62,14 +62,14 @@
         }
       }
     },
-    "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProject\\LogisticsEntity\\LogisticsEntity.csproj": {
+    "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsEntity\\LogisticsEntity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProject\\LogisticsEntity\\LogisticsEntity.csproj",
+        "projectUniqueName": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsEntity\\LogisticsEntity.csproj",
         "projectName": "LogisticsEntity",
-        "projectPath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProject\\LogisticsEntity\\LogisticsEntity.csproj",
+        "projectPath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsEntity\\LogisticsEntity.csproj",
         "packagesPath": "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProject\\LogisticsEntity\\obj\\",
+        "outputPath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsEntity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -89,8 +89,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProject\\LogisticsDataCore\\LogisticsDataCore.csproj": {
-                "projectPath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProject\\LogisticsDataCore\\LogisticsDataCore.csproj"
+              "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsDataCore\\LogisticsDataCore.csproj": {
+                "projectPath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsDataCore\\LogisticsDataCore.csproj"
               }
             }
           }

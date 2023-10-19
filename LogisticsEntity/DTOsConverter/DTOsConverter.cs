@@ -17,7 +17,6 @@ namespace LogisticsDataCore.DTOsConverter
             {
                 UserName = dto.UserName,
                 PasswordHash = passwordHash,
-                PasswordSalt = passwordSalt,
                 Age = dto.Age,
                 Email = dto.Email,
                 Phone = dto.Phone,
