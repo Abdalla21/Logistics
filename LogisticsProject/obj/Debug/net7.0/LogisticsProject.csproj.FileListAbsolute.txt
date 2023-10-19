@@ -78,6 +78,13 @@ C:\Users\abdalla.ahmed\source\repos\LogisticsProject\LogisticsProject\bin\Debug\
 C:\Users\abdalla.ahmed\source\repos\LogisticsProject\LogisticsProject\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\abdalla.ahmed\source\repos\LogisticsProject\LogisticsProject\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\abdalla.ahmed\source\repos\LogisticsProject\LogisticsProject\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\LogisticsProject.csproj.AssemblyReference.cache
+C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\LogisticsProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\LogisticsProject.AssemblyInfoInputs.cache
+C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\LogisticsProject.AssemblyInfo.cs
+C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\LogisticsProject.csproj.CoreCompileInputs.cache
+C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\LogisticsProject.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\LogisticsProject.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\bin\Debug\net7.0\appsettings.json
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\bin\Debug\net7.0\LogisticsProject.exe
@@ -87,6 +94,7 @@ C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\Logistics
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\bin\Debug\net7.0\LogisticsProject.pdb
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\bin\Debug\net7.0\BCrypt.Net-Next.dll
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\bin\Debug\net7.0\Humanizer.dll
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
@@ -141,13 +149,6 @@ C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\Logistics
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\bin\Debug\net7.0\LogisticsEntity.dll
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\bin\Debug\net7.0\LogisticsEntity.pdb
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\bin\Debug\net7.0\LogisticsDataCore.pdb
-C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\LogisticsProject.csproj.AssemblyReference.cache
-C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\LogisticsProject.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\LogisticsProject.AssemblyInfoInputs.cache
-C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\LogisticsProject.AssemblyInfo.cs
-C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\LogisticsProject.csproj.CoreCompileInputs.cache
-C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\LogisticsProject.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\LogisticsProject.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\staticwebassets\msbuild.LogisticsProject.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\staticwebassets\msbuild.build.LogisticsProject.props
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.LogisticsProject.props

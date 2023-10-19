@@ -10,6 +10,6 @@ namespace LogisticsDataCore.IPasswordAndJWT
 {
     public interface IJWTToken
     {
-        public string GetJWTToken(UserResponseDTO userDTO, string PrivateKey);
+        public string GetJWTToken(User user, string PrivateKey);
     }
 }

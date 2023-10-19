@@ -2,21 +2,21 @@
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using LogisticsDataCore.DTOs;
 using System.IdentityModel.Tokens.Jwt;
 using LogisticsProject;
+using LogisticsDataCore.Models;
 
 namespace LogisticsEntity.PasswordAndJWT
 {
     public class JWTToken : IJWTToken
     {
 
-        public string GetJWTToken(UserResponseDTO userDTO, string PrivateKey)
+        public string GetJWTToken(User user, string PrivateKey)
         {
             List<Claim> claimsList = new List<Claim>()
             {
-                new Claim(ClaimTypes.Name, userDTO.UserName),
-                new Claim(ClaimTypes.Role, userDTO.Role)
+                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(ClaimTypes.Role, user.Role)
             };
 
             SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(PrivateKey));

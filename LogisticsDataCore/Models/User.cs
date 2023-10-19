@@ -8,7 +8,7 @@ namespace LogisticsDataCore.Models
 
         public required string UserName { get; set; }
 
-        public required byte[] PasswordHash { get; set; }
+        public required string PasswordHash { get; set; }
 
         public required int Age { get; set; }
 
@@ -18,7 +18,7 @@ namespace LogisticsDataCore.Models
 
         public required string Role { get; set; }
 
-        public DateTime CreatedDateTime { get; set; }
+        public required string CreatedDateTime { get; set; }
 
     }
 }

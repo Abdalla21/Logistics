@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "7FOXacpBgJvTbhSAw6F+mENTz/VDKFullEa/u4Jl+Dh4kAjL6auBmqUYmVjXOBK8ysEJsyO1dUxjOaWkcC/IWw==",
+  "dgSpecHash": "XzwEwa7GqSR5+ibz8I6Shgd2FBoe6Kpu0SXc7+e84Akrvfy3rh+C8cBRhp/h+cGx0eR5qmPjsLuJ5Gl06e1w+g==",
   "success": true,
   "projectFilePath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsProject\\LogisticsProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.12\\microsoft.aspnetcore.authentication.jwtbearer.7.0.12.nupkg.sha512",
     "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.12\\microsoft.aspnetcore.openapi.7.0.12.nupkg.sha512",

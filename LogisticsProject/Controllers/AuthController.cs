@@ -1,8 +1,10 @@
-﻿using LogisticsDataCore.DTOs;
+﻿using LogisticsDataCore.Constants;
+using LogisticsDataCore.DTOs;
 using LogisticsDataCore.DTOsConverter;
-using LogisticsDataCore.IPasswordHash;
 using LogisticsDataCore.Models;
+using LogisticsDataCore.Repositories;
 using LogisticsEntity.ModelsAssigner;
+using LogisticsEntity.ModelsFieldsValidator;
 using LogisticsEntity.PasswordAndJWT;
 using LogisticsEntity.PasswordHash;
 using Microsoft.AspNetCore.Authorization;
@@ -12,30 +14,51 @@ namespace LogisticsProject.Controllers
 
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class AuthController(IConfiguration Configuration) : ControllerBase
+    public class AuthController(IConfiguration Configuration, IGenericRepository<User> repository) : ControllerBase
     {
 
         [HttpPost("register")]
         public ActionResult<User> Register(UserRequestDTO userRequestDTO)
         {
             DTOsConverter dTOsConverter = new DTOsConverter();
+            UserModelFieldsValidator userModelFieldsValidator = new UserModelFieldsValidator();
 
-            return Ok(dTOsConverter.ConvertUserRequestDTOToUser(userRequestDTO));
+            int statusCode = 0;
+
+            RegisterErrorsModel registerErrorsModel = userModelFieldsValidator.ValidateUserFields(userRequestDTO, out statusCode);
+
+            if (statusCode == 200)
+            {
+                User user = dTOsConverter.ConvertUserRequestDTOToUser(userRequestDTO);
+                repository.SaveUser(user);
+
+                return Ok();
+            }
+            else
+            {
+                return StatusCode(statusCode, registerErrorsModel);
+            }
+
         }
 
 
         [HttpGet("Roles"), Authorize(Roles = "Admin")]
         public ActionResult<List<string>> GetRoles()
         {
-            return Ok(AuthConstants.Roles);
+            return Ok(UsersRolesConstants.Roles);
         }
 
 
         [HttpPost()]
         public ActionResult<JWTTokenModel> Login(UserResponseDTO user)
         {
-            PasswordHash _PasswordHash = new PasswordHash();
-            bool isVerified = _PasswordHash.VerifyPassword(user.Password, user.Hash, user.Salt);
+            User userSelected = repository.GetUser(u => u.Email == user.Email);
+
+            if (userSelected is null)
+                return BadRequest();
+
+            PasswordHash PasswordHash = new PasswordHash();
+            bool isVerified = PasswordHash.VerifyPassword(user.Password, userSelected.PasswordHash);
 
             if (isVerified)
             {
@@ -44,12 +67,12 @@ namespace LogisticsProject.Controllers
 
                 string privateKey = Configuration.GetSection("JWT:Key").Value!;
 
-                string token = tokenClass.GetJWTToken(user, privateKey);
+                string token = tokenClass.GetJWTToken(userSelected, privateKey);
 
                 return Ok(modelsAssigner.AssignTokenModel(token));
             }
             else
-                return BadRequest();
+                return Unauthorized();
         }
 
     }

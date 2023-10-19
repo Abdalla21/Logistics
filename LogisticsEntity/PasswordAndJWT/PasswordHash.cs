@@ -7,28 +7,14 @@ namespace LogisticsEntity.PasswordHash
     public class PasswordHash : IPasswordHash
     {
 
-        public void HashPassword(string password, out byte[] passwordSalt, out byte[] passwordHashed)
+        public string HashPassword(string password)
         {
-            using (HMACSHA512 sha = new HMACSHA512())
-            {
-
-                passwordSalt = sha.Key;
-                passwordHashed = sha.ComputeHash(Encoding.UTF8.GetBytes(password));
-            }
-
+            return BCrypt.Net.BCrypt.HashPassword(password);
         }
 
-        public bool VerifyPassword(string password, byte[] passwordHash, byte[] passwordSalt)
+        public bool VerifyPassword(string password, string passwordHash)
         {
-
-            using (HMACSHA512 sha = new HMACSHA512(passwordSalt))
-            {
-
-                byte[] computedHash = sha.ComputeHash(Encoding.UTF8.GetBytes(password));
-
-                return computedHash.SequenceEqual(passwordHash);
-            }
-
+            return BCrypt.Net.BCrypt.Verify(password, passwordHash);
         }
 
     }

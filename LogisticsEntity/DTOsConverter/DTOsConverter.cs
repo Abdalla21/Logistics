@@ -1,4 +1,5 @@
-﻿using LogisticsDataCore.DTOs;
+﻿using LogisticsDataCore.Constants;
+using LogisticsDataCore.DTOs;
 using LogisticsDataCore.Models;
 using LogisticsEntity.PasswordHash;
 
@@ -6,28 +7,25 @@ namespace LogisticsDataCore.DTOsConverter
 {
     public class DTOsConverter
     {
-
         public User ConvertUserRequestDTOToUser(UserRequestDTO dto)
         {
             PasswordHash passwordHashClass = new PasswordHash();
 
-            passwordHashClass.HashPassword(dto.Password, out byte[] passwordSalt, out byte[] passwordHash);
+            string HashedPassword = passwordHashClass.HashPassword(dto.Password);
 
             User user = new User
             {
                 UserName = dto.UserName,
-                PasswordHash = passwordHash,
+                PasswordHash = HashedPassword,
                 Age = dto.Age,
                 Email = dto.Email,
                 Phone = dto.Phone,
                 Role = dto.Role,
-                CreatedDateTime = DateTime.Now
+                CreatedDateTime = DateTime.Now.ToString(GlobalConstants.DateTimeFormat)
             };
 
             return user;
         }
-
-
 
     }
 }

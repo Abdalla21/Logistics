@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "MKpfKwk+Olz6hHNLEg+ckQiEKCXWUGlnZVafY4tkm2ojwP1ngNL4jjIjfNBnT1x+tOGQR69M9imeetPtDupzzA==",
+  "dgSpecHash": "cfhx3aEXwc+gM/SUCRlNFIQMRyVuTT9sKmzK381ilJhGA1kS4fozVXpjY/hXAMWDPtRU8+9KGhOTVEGwiPBGFg==",
   "success": true,
   "projectFilePath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsEntity\\LogisticsEntity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",

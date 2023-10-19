@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using LogisticsDataCore.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace LogisticsEntity.DBContext
 {
@@ -8,5 +9,8 @@ namespace LogisticsEntity.DBContext
         {
             
         }
+
+        public DbSet<User> users { get; set; }
+
     }
 }

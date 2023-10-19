@@ -1,4 +1,6 @@
+using LogisticsDataCore.Repositories;
 using LogisticsEntity.DBContext;
+using LogisticsEntity.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -44,7 +46,7 @@ builder.Services.AddSwaggerGen(options =>
 
 #endregion
 
-//builder.Services.AddSingleton<IPasswordHash, PasswordHash>();
+builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
 var app = builder.Build();
 
