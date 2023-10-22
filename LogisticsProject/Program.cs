@@ -10,11 +10,17 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers();
+
+#region DB Context
+
 builder.Services.AddDbContext<ApplicationDBContext>(
     options => options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddControllers();
+#endregion
+
+#region JWT Auth
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -27,6 +33,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 ValidateAudience = false
             };
         });
+
+#endregion
 
 #region Swagger Service
 
@@ -46,7 +54,11 @@ builder.Services.AddSwaggerGen(options =>
 
 #endregion
 
+#region DI 
+
 builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
+#endregion
 
 var app = builder.Build();
 
