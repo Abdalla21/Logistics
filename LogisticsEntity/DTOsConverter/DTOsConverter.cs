@@ -20,7 +20,6 @@ namespace LogisticsDataCore.DTOsConverter
                 Age = dto.Age,
                 Email = dto.Email,
                 Phone = dto.Phone,
-                Role = dto.Role,
                 CreatedDateTime = DateTime.Now.ToString(GlobalConstants.DateTimeFormat)
             };
 

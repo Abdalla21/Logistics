@@ -56,7 +56,7 @@ namespace LogisticsEntity.ModelsFieldsValidator
 
         public bool IsValidAge(int age)
         {
-            if (age <= AuthConstants.MinAge)
+            if (age <= AuthConstants.MinAge || age <= AuthConstants.MaxAge)
                 return false;
             else
                 return true;
@@ -89,13 +89,6 @@ namespace LogisticsEntity.ModelsFieldsValidator
                 return false;
         }
 
-        public bool IsValidRole(string role)
-        {
-            if (UsersRolesConstants.Roles.Contains(role))
-                return true;
-            else
-                return false;
-        }
 
         public RegisterErrorsModel ValidateUserFields(UserRequestDTO userRequestDTO, out int StatusCode)
         {
@@ -105,37 +98,31 @@ namespace LogisticsEntity.ModelsFieldsValidator
             if (!IsValidEmail(userRequestDTO.Email))
             {
                 registerErrorsModel.ErrorMessage = RegisterErrorMessagesConstants.EmailNotValid;
-                StatusCode = 471;
+                StatusCode = AuthConstants.EmailNotValidStatusCode;
                 return registerErrorsModel;
             }
             else if (!IsValidAge(userRequestDTO.Age))
             {
                 registerErrorsModel.ErrorMessage = RegisterErrorMessagesConstants.AgeNotValid;
-                StatusCode = 472;
+                StatusCode = AuthConstants.AgeNotValidStatusCode;
                 return registerErrorsModel;
             }
             else if (!IsValidUsername(userRequestDTO.UserName))
             {
                 registerErrorsModel.ErrorMessage = RegisterErrorMessagesConstants.UsernameNotValid;
-                StatusCode = 473;
+                StatusCode = AuthConstants.UsernameNotValidStatusCode;
                 return registerErrorsModel;
             }
             else if (!IsValidPhone(userRequestDTO.Phone))
             {
                 registerErrorsModel.ErrorMessage = RegisterErrorMessagesConstants.PhoneNotValid;
-                StatusCode = 474;
+                StatusCode = AuthConstants.PhoneNotValidStatusCode;
                 return registerErrorsModel;
             }
             else if (!IsValidPassword(userRequestDTO.Password))
             {
                 registerErrorsModel.ErrorMessage = RegisterErrorMessagesConstants.PasswordNotValid;
-                StatusCode = 475;
-                return registerErrorsModel;
-            }
-            else if (!IsValidRole(userRequestDTO.Role))
-            {
-                registerErrorsModel.ErrorMessage = RegisterErrorMessagesConstants.RoleNotValid;
-                StatusCode = 476;
+                StatusCode = AuthConstants.PasswordNotValidStatusCode;
                 return registerErrorsModel;
             }
             else

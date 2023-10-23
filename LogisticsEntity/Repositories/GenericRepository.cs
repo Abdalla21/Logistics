@@ -8,6 +8,8 @@ namespace LogisticsEntity.Repositories
     {
         public T GetUser(Expression<Func<T, bool>> Match) => applicationDBContext.Set<T>().FirstOrDefault(Match);
 
+        public List<T> GetAll() => applicationDBContext.Set<T>().ToList();
+
         public void SaveUser(T User)
         {
             applicationDBContext.Set<T>().Add(User);

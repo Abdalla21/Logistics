@@ -14,7 +14,7 @@ namespace LogisticsProject.Controllers
 
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class AuthController(IConfiguration Configuration, IGenericRepository<User> repository) : ControllerBase
+    public class AuthController(IConfiguration Configuration, IGenericRepository<User> UsersRepository, IGenericRepository<Role> RolesRepository) : ControllerBase
     {
 
         [HttpPost()]
@@ -23,6 +23,16 @@ namespace LogisticsProject.Controllers
             DTOsConverter dTOsConverter = new DTOsConverter();
             UserModelFieldsValidator userModelFieldsValidator = new UserModelFieldsValidator();
 
+            User userByEmail = UsersRepository.GetUser(user => user.Email == userRequestDTO.Email);
+
+            if (userByEmail != null)
+                return StatusCode(AuthConstants.EmailExistsStatusCode);
+
+            User userByUserName = UsersRepository.GetUser(user => user.UserName == userRequestDTO.UserName);
+
+            if (userByUserName != null)
+                return StatusCode(AuthConstants.UserExistsStatusCode);
+
             int statusCode = 0;
 
             RegisterErrorsModel registerErrorsModel = userModelFieldsValidator.ValidateUserFields(userRequestDTO, out statusCode);
@@ -30,7 +40,7 @@ namespace LogisticsProject.Controllers
             if (statusCode == 200)
             {
                 User user = dTOsConverter.ConvertUserRequestDTOToUser(userRequestDTO);
-                repository.SaveUser(user);
+                UsersRepository.SaveUser(user);
 
                 return Ok();
             }
@@ -43,16 +53,16 @@ namespace LogisticsProject.Controllers
 
 
         [HttpGet(), Authorize(Roles = "Admin")]
-        public ActionResult<List<string>> GetRoles()
+        public ActionResult<List<Role>> GetRoles()
         {
-            return Ok(UsersRolesConstants.Roles);
+            return Ok(RolesRepository.GetAll());
         }
 
 
         [HttpPost()]
         public ActionResult<JWTTokenModel> Login(UserResponseDTO user)
         {
-            User userSelected = repository.GetUser(u => u.Email == user.Email);
+            User userSelected = UsersRepository.GetUser(u => u.Email == user.Email);
 
             if (userSelected is null)
                 return BadRequest();

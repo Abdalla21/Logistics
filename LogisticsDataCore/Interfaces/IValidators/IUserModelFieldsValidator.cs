@@ -15,7 +15,6 @@ namespace LogisticsDataCore.IValidators
 
         public bool IsValidPassword(string password);
 
-        public bool IsValidRole(string role);
         public RegisterErrorsModel ValidateUserFields(UserRequestDTO userRequestDTO, out int StatusCode);
 
     }

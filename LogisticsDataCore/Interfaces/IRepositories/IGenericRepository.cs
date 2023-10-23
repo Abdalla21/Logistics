@@ -9,5 +9,7 @@ namespace LogisticsDataCore.Repositories
 
         T GetUser(Expression<Func<T, bool>> Match);
 
+        public List<T> GetAll();
+
     }
 }
