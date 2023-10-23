@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LogisticsProject.Controllers
 {
+
+    [Route("api/[controller]/[action]")]
     public class InfoController(IGenericRepository<Role> RolesRepository,
         IGenericRepository<Governorate> GovernoratesRepository,
         IGenericRepository<Category> CategoriesRepository) : ControllerBase
