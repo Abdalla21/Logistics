@@ -14,8 +14,7 @@ namespace LogisticsProject.Controllers
 
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class AuthController(IConfiguration Configuration, IGenericRepository<User> UsersRepository, IGenericRepository<Role> RolesRepository,
-        IGenericRepository<Governorate> GovernoratesRepository, IGenericRepository<Category> CategoriesRepository) : ControllerBase
+    public class AuthController(IConfiguration Configuration, IGenericRepository<User> UsersRepository) : ControllerBase
     {
 
         [HttpPost()]
@@ -52,24 +51,6 @@ namespace LogisticsProject.Controllers
 
         }
 
-
-        [HttpGet(), Authorize(Roles = "Admin")]
-        public ActionResult<List<Role>> GetRoles()
-        {
-            return Ok(RolesRepository.GetAll());
-        }
-
-        [HttpGet(), Authorize(Roles = "Admin")]
-        public ActionResult<List<Role>> GetGovernorates()
-        {
-            return Ok(GovernoratesRepository.GetAll());
-        }
-
-        [HttpGet(), Authorize(Roles = "Admin")]
-        public ActionResult<List<Role>> GetCategories()
-        {
-            return Ok(CategoriesRepository.GetAll());
-        }
 
         [HttpPost()]
         public ActionResult<JWTTokenModel> Login(UserResponseDTO user)
