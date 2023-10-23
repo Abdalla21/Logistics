@@ -22,18 +22,20 @@ namespace LogisticsProject.Controllers
         {
             DTOsConverter dTOsConverter = new DTOsConverter();
             UserModelFieldsValidator userModelFieldsValidator = new UserModelFieldsValidator();
+            ModelsAssigner modelsAssigner = new ModelsAssigner();
 
             User userByEmail = UsersRepository.GetUser(user => user.Email == userRequestDTO.Email);
 
+            int statusCode = 0;
+
             if (userByEmail != null)
-                return StatusCode(AuthConstants.EmailExistsStatusCode);
+                return StatusCode(AuthConstants.EmailExistsStatusCode, modelsAssigner.AssignErrorMessage(RegisterErrorMessagesConstants.EmailAlreadyExists));
 
             User userByUserName = UsersRepository.GetUser(user => user.UserName == userRequestDTO.UserName);
 
             if (userByUserName != null)
-                return StatusCode(AuthConstants.UserExistsStatusCode);
+                return StatusCode(AuthConstants.UserExistsStatusCode, modelsAssigner.AssignErrorMessage(RegisterErrorMessagesConstants.UserNameAlreadyExists));
 
-            int statusCode = 0;
 
             RegisterErrorsModel registerErrorsModel = userModelFieldsValidator.ValidateUserFields(userRequestDTO, out statusCode);
 

@@ -19,5 +19,14 @@ namespace LogisticsEntity.ModelsAssigner
             return tokenModel;
         }
 
+        public RegisterErrorsModel AssignErrorMessage(string Msg)
+        {
+            RegisterErrorsModel registerErrorsModel = new RegisterErrorsModel();
+
+            registerErrorsModel.ErrorMessage = Msg;
+
+            return registerErrorsModel;
+        }
+
     }
 }
