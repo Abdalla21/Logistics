@@ -1,4 +1,6 @@
-﻿namespace LogisticsProject
+﻿using LogisticsDataCore.DTOs;
+
+namespace LogisticsProject
 {
     public class AuthConstants
     {
@@ -25,6 +27,11 @@
         public readonly static int UserExistsStatusCode = 476;
 
         public readonly static int EmailExistsStatusCode = 477;
+
+        public static string GetSuccessfullRegistrationMsg(string Username)
+        {
+            return $"User {Username} Registered Successfully";
+        }
 
     }
 }

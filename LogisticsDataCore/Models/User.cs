@@ -2,7 +2,7 @@
 
 namespace LogisticsDataCore.Models
 {
-    public class User
+    public class User : SystemTableFields
     {
         public int UserID { get; set; }
 
@@ -18,7 +18,6 @@ namespace LogisticsDataCore.Models
 
         public string? Role { get; set; }
 
-        public required string CreatedDateTime { get; set; }
 
     }
 }

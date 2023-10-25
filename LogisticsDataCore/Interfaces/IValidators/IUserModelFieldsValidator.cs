@@ -15,7 +15,7 @@ namespace LogisticsDataCore.Interfaces.IValidators
 
         public bool IsValidPassword(string password);
 
-        public RegisterErrorsModel ValidateUserFields(UserRequestDTO userRequestDTO, out int StatusCode);
+        public ErrorsModel ValidateUserFields(UserRequestDTO userRequestDTO, out int StatusCode);
 
     }
 }

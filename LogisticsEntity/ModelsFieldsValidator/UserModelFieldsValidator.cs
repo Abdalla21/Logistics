@@ -90,10 +90,10 @@ namespace LogisticsEntity.ModelsFieldsValidator
         }
 
 
-        public RegisterErrorsModel ValidateUserFields(UserRequestDTO userRequestDTO, out int StatusCode)
+        public ErrorsModel ValidateUserFields(UserRequestDTO userRequestDTO, out int StatusCode)
         {
 
-            RegisterErrorsModel registerErrorsModel = new RegisterErrorsModel();
+            ErrorsModel registerErrorsModel = new ErrorsModel();
 
             if (!IsValidEmail(userRequestDTO.Email))
             {

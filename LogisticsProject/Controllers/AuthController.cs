@@ -38,7 +38,7 @@ namespace LogisticsProject.Controllers
                 return StatusCode(AuthConstants.UserExistsStatusCode, modelsAssigner.AssignErrorMessage(RegisterErrorMessagesConstants.UserNameAlreadyExists));
 
 
-            RegisterErrorsModel registerErrorsModel = userModelFieldsValidator.ValidateUserFields(userRequestDTO, out statusCode);
+            ErrorsModel registerErrorsModel = userModelFieldsValidator.ValidateUserFields(userRequestDTO, out statusCode);
 
             if (statusCode == 200)
             {
@@ -46,7 +46,7 @@ namespace LogisticsProject.Controllers
                 unitOfWork.Users.Save(user);
                 unitOfWork.Complete();
 
-                return Ok();
+                return Ok(AuthConstants.GetSuccessfullRegistrationMsg(userRequestDTO.UserName));
             }
             else
             {
@@ -62,7 +62,7 @@ namespace LogisticsProject.Controllers
             User userSelected = unitOfWork.Users.Get(u => u.Email == user.Email);
 
             if (userSelected is null)
-                return BadRequest();
+                return Unauthorized();
 
             PasswordHash PasswordHash = new PasswordHash();
             bool isVerified = PasswordHash.VerifyPassword(user.Password, userSelected.PasswordHash);
