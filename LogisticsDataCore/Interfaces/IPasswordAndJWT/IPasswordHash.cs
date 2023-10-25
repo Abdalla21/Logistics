@@ -1,5 +1,6 @@
 ﻿using System;
-namespace LogisticsDataCore.IPasswordHash
+
+namespace LogisticsDataCore.Interfaces.IPasswordAndJWT
 {
     public interface IPasswordHash
     {

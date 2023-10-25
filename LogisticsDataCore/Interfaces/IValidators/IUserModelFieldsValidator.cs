@@ -1,7 +1,7 @@
 ﻿using LogisticsDataCore.DTOs;
 using LogisticsDataCore.Models;
 
-namespace LogisticsDataCore.IValidators
+namespace LogisticsDataCore.Interfaces.IValidators
 {
     public interface IUserModelFieldsValidator
     {

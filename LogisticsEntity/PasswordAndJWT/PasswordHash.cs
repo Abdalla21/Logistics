@@ -1,4 +1,4 @@
-﻿using LogisticsDataCore.IPasswordHash;
+﻿using LogisticsDataCore.Interfaces.IPasswordAndJWT;
 using System.Security.Cryptography;
 using System.Text;
 

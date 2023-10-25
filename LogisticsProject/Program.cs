@@ -1,6 +1,6 @@
-using LogisticsDataCore.Repositories;
+using LogisticsDataCore.Interfaces.IUnitOfWork;
 using LogisticsEntity.DBContext;
-using LogisticsEntity.Repositories;
+using LogisticsEntity.UnitOfWork;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -47,7 +47,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         });
 
 #endregion
-
+ 
 #region Swagger Service
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -68,14 +68,12 @@ builder.Services.AddSwaggerGen(options =>
 
 #region DI 
 
-builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+//builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 
 #endregion
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-//if (app.Environment.IsDevelopment())
 
 app.UseSwagger();
 app.UseSwaggerUI();

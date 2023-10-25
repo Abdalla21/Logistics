@@ -16,7 +16,7 @@ namespace LogisticsDataCore.Models
 
         public required string Phone { get; set; }
 
-        public string Role { get; set; }
+        public string? Role { get; set; }
 
         public required string CreatedDateTime { get; set; }
 

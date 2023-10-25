@@ -14,9 +14,9 @@
 
         public readonly static string RoleNotValid = "The Role You Entered Is Not Valid.";
 
-        public readonly static string EmailAlreadyExists = "The Email You Entered Is Already Exists.";
+        public readonly static string EmailAlreadyExists = "The Email You Entered Already Exists.";
 
-        public readonly static string UserNameAlreadyExists = "The Username You Entered Is Already Exists.";
+        public readonly static string UserNameAlreadyExists = "The Username You Entered Already Exists.";
 
 
     }

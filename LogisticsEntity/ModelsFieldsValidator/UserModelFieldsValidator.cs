@@ -1,6 +1,6 @@
 ﻿using LogisticsDataCore.Constants;
 using LogisticsDataCore.DTOs;
-using LogisticsDataCore.IValidators;
+using LogisticsDataCore.Interfaces.IValidators;
 using LogisticsDataCore.Models;
 using LogisticsProject;
 using System.Globalization;
@@ -56,7 +56,7 @@ namespace LogisticsEntity.ModelsFieldsValidator
 
         public bool IsValidAge(int age)
         {
-            if (age <= AuthConstants.MinAge || age <= AuthConstants.MaxAge)
+            if (age <= AuthConstants.MinAge || age >= AuthConstants.MaxAge)
                 return false;
             else
                 return true;

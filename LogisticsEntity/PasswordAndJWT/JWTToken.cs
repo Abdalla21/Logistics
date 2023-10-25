@@ -1,10 +1,10 @@
-﻿using LogisticsDataCore.IPasswordAndJWT;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.IdentityModel.Tokens.Jwt;
 using LogisticsProject;
 using LogisticsDataCore.Models;
+using LogisticsDataCore.Interfaces.IPasswordAndJWT;
 
 namespace LogisticsEntity.PasswordAndJWT
 {
@@ -15,8 +15,7 @@ namespace LogisticsEntity.PasswordAndJWT
         {
             List<Claim> claimsList = new List<Claim>()
             {
-                new Claim(ClaimTypes.Name, user.UserName),
-                new Claim(ClaimTypes.Role, user.Role)
+                new Claim(ClaimTypes.Name, user.UserName)
             };
 
             SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(PrivateKey));

@@ -1,5 +1,6 @@
-﻿using LogisticsDataCore.Models;
-using LogisticsDataCore.Repositories;
+﻿using LogisticsDataCore.Interfaces.IRepositories;
+using LogisticsDataCore.Interfaces.IUnitOfWork;
+using LogisticsDataCore.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,29 +8,27 @@ namespace LogisticsProject.Controllers
 {
 
     [Route("api/[controller]/[action]")]
-    public class InfoController(IGenericRepository<Role> RolesRepository,
-        IGenericRepository<Governorate> GovernoratesRepository,
-        IGenericRepository<Category> CategoriesRepository) : ControllerBase
+    public class InfoController(IUnitOfWork unitOfWork) : ControllerBase
     {
 
-        [HttpGet(), Authorize(Roles = "Admin")]
-        public ActionResult<List<Role>> GetCategories()
+        [HttpGet(), Authorize()]
+        public ActionResult<List<Category>> GetCategories()
         {
-            return Ok(CategoriesRepository.GetAll());
+            return Ok(unitOfWork.Categories.GetAll());
         }
 
 
-        [HttpGet(), Authorize(Roles = "Admin")]
+        [HttpGet(), Authorize()]
         public ActionResult<List<Role>> GetRoles()
         {
-            return Ok(RolesRepository.GetAll());
+            return Ok(unitOfWork.Roles.GetAll());
         }
 
 
-        [HttpGet(), Authorize(Roles = "Admin")]
-        public ActionResult<List<Role>> GetGovernorates()
+        [HttpGet(), Authorize()]
+        public ActionResult<List<Governorate>> GetGovernorates()
         {
-            return Ok(GovernoratesRepository.GetAll());
+            return Ok(unitOfWork.Governorates.GetAll());
         }
     }
 }

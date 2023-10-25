@@ -1,13 +1,13 @@
 ﻿
 using System.Linq.Expressions;
 
-namespace LogisticsDataCore.Repositories
+namespace LogisticsDataCore.Interfaces.IRepositories
 {
     public interface IGenericRepository<T> where T : class
     {
-        void SaveUser(T User);
+        void Save(T User);
 
-        T GetUser(Expression<Func<T, bool>> Match);
+        T Get(Expression<Func<T, bool>> Match);
 
         public List<T> GetAll();
 

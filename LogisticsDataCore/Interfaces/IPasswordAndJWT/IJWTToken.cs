@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LogisticsDataCore.IPasswordAndJWT
+namespace LogisticsDataCore.Interfaces.IPasswordAndJWT
 {
     public interface IJWTToken
     {
