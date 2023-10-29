@@ -6,7 +6,9 @@ namespace LogisticsProject
     {
         public readonly static int JWTTokenExpireDateByHours = 1;
 
-        public readonly static string TokenType = "JWT";
+        public readonly static string TokenType = "Bearer";
+
+        public readonly static string UsrNotApproved = "User Needs To Be Approved Please Call Your Admin.";
 
         public readonly static int MinAge = 15;
 
@@ -32,6 +34,8 @@ namespace LogisticsProject
         {
             return $"User {Username} Registered Successfully";
         }
+
+
 
     }
 }

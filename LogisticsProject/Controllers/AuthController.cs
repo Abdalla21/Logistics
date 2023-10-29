@@ -59,6 +59,8 @@ namespace LogisticsProject.Controllers
         [HttpPost()]
         public ActionResult<JWTTokenModel> Login(UserResponseDTO user)
         {
+            MessagesModel msgModel = new MessagesModel();
+
             User userSelected = unitOfWork.Users.Get(u => u.Email == user.Email);
 
             if (userSelected is null)
@@ -69,6 +71,12 @@ namespace LogisticsProject.Controllers
 
             if (isVerified)
             {
+                if (userSelected.Role is null)
+                {
+                    msgModel.Message = AuthConstants.UsrNotApproved;
+                    return BadRequest(msgModel);
+                }
+
                 JWTToken tokenClass = new JWTToken();
                 ModelsAssigner modelsAssigner = new ModelsAssigner();
 
