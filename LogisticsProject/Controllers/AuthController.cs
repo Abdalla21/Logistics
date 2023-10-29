@@ -38,7 +38,7 @@ namespace LogisticsProject.Controllers
             if (userByUserName != null)
                 return StatusCode(AuthConstants.UserExistsStatusCode, modelsAssigner.AssignErrorMessage(RegisterErrorMessagesConstants.UserNameAlreadyExists));
 
-            MessagesModel registerErrorsModel = userModelFieldsValidator.ValidateUserFields(userRequestDTO, out statusCode);
+            msgModel = userModelFieldsValidator.ValidateUserFields(userRequestDTO, out statusCode);
 
             if (statusCode == 200)
             {
@@ -50,7 +50,7 @@ namespace LogisticsProject.Controllers
             }
             else
             {
-                return StatusCode(statusCode, registerErrorsModel);
+                return StatusCode(statusCode, msgModel);
             }
 
         }
