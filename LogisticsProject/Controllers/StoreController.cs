@@ -3,12 +3,17 @@ using LogisticsDataCore.DTOsConverter;
 using LogisticsDataCore.Interfaces.IUnitOfWork;
 using LogisticsDataCore.Models;
 using LogisticsEntity.ModelsFieldsValidator;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LogisticsProject.Controllers
 {
+
+    [Route("api/[controller]/[action]")]
     public class StoreController(IUnitOfWork unitOfWork) : ControllerBase
     {
+
+        [HttpPost(), Authorize()]
         public ActionResult<StoreRequestDTO> AddStore(StoreRequestDTO storeDto)
         {
             Store storeWithStoreName = unitOfWork.Stores.Get(s => s.StoreName == storeDto.StoreName);

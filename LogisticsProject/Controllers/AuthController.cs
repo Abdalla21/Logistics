@@ -19,11 +19,12 @@ namespace LogisticsProject.Controllers
     {
 
         [HttpPost()]
-        public ActionResult<User> Register(UserRequestDTO userRequestDTO)
+        public ActionResult Register(UserRequestDTO userRequestDTO)
         {
             DTOsConverter dTOsConverter = new DTOsConverter();
             UserModelFieldsValidator userModelFieldsValidator = new UserModelFieldsValidator();
             ModelsAssigner modelsAssigner = new ModelsAssigner();
+            SuccessModel successModel = new SuccessModel();
 
             User userByEmail = unitOfWork.Users.Get(user => user.Email == userRequestDTO.Email);
 
@@ -45,8 +46,8 @@ namespace LogisticsProject.Controllers
                 User user = dTOsConverter.ConvertUserRequestDTOToUser(userRequestDTO);
                 unitOfWork.Users.Save(user);
                 unitOfWork.Complete();
-
-                return Ok(AuthConstants.GetSuccessfullRegistrationMsg(userRequestDTO.UserName));
+                successModel.SuccessMsg = AuthConstants.GetSuccessfullRegistrationMsg(userRequestDTO.UserName);
+                return Ok(successModel);
             }
             else
             {

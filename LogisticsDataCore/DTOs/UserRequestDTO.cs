@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace LogisticsDataCore.DTOs
+﻿namespace LogisticsDataCore.DTOs
 {
     public class UserRequestDTO
     {
