@@ -1,5 +1,7 @@
+using LogisticsDataCore.Interfaces.IEmailService;
 using LogisticsDataCore.Interfaces.IUnitOfWork;
 using LogisticsEntity.DBContext;
+using LogisticsEntity.EmailService;
 using LogisticsEntity.UnitOfWork;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -68,8 +70,8 @@ builder.Services.AddSwaggerGen(options =>
 
 #region DI 
 
-//builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+builder.Services.AddTransient<IEmailService, EmailService>();
 
 #endregion
 

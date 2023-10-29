@@ -18,6 +18,14 @@
 
         public readonly static string UserNameAlreadyExists = "The Username You Entered Already Exists.";
 
+        public readonly static string UsrNotApproved = "User Needs To Be Approved Please Call Your Admin.";
+
+        public readonly static string CodeDosntExist = "This Verification Code Dosent Exist.";
+
+        public readonly static string CodeExpired = "This Verification Code Has Been Expired.";
+
+        public readonly static string MailNotVerified = "You Need Yo Verify Your Email.";
+
 
     }
 }

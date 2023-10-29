@@ -163,3 +163,8 @@ C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\Logistics
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\LogisticsProject.pdb
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\LogisticsProject.genruntimeconfig.cache
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\obj\Debug\net7.0\ref\LogisticsProject.dll
+C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
+C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\bin\Debug\net7.0\MailKit.dll
+C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\bin\Debug\net7.0\MimeKit.dll
+C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsProject\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll

@@ -18,7 +18,7 @@ namespace LogisticsEntity.ModelsFieldsValidator
                 StatusCode = 400;
                 return errorsModel;
             }
-            else if (!IsGovernorateIDExists(Govs, storeDto.StoreGovernorateID))
+            else if (!IsGovernorateIDExists(Govs, storeDto.StoreGovernorateName))
             {
                 errorsModel.Message = StoreErrors.InvalidStoreGovID;
                 StatusCode = 400;
@@ -36,11 +36,11 @@ namespace LogisticsEntity.ModelsFieldsValidator
             }
         }
 
-        private bool IsGovernorateIDExists(List<Governorate> govs, int govID)
+        private bool IsGovernorateIDExists(List<Governorate> govs, string govName)
         {
             foreach (Governorate g in govs)
             {
-                if (g.GovernorateID == govID)
+                if (g.GovernorateName == govName)
                     return true;
             }
 

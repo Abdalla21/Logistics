@@ -8,8 +8,6 @@ namespace LogisticsProject
 
         public readonly static string TokenType = "Bearer";
 
-        public readonly static string UsrNotApproved = "User Needs To Be Approved Please Call Your Admin.";
-
         public readonly static int MinAge = 15;
 
         public readonly static int MaxAge = 70;
@@ -30,9 +28,11 @@ namespace LogisticsProject
 
         public readonly static int EmailExistsStatusCode = 477;
 
+        public readonly static string SuccessfullVerification = "Your Email Has Been Verified.";
+
         public static string GetSuccessfullRegistrationMsg(string Username)
         {
-            return $"User {Username} Registered Successfully";
+            return $"User {Username} Registered Successfully. A Verification Code Has Been Sent To Your Email.";
         }
 
 

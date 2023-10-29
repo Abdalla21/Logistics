@@ -3,6 +3,7 @@ using LogisticsDataCore.DTOsConverter;
 using LogisticsDataCore.Interfaces.IUnitOfWork;
 using LogisticsDataCore.Models;
 using LogisticsEntity.ModelsFieldsValidator;
+using LogisticsEntity.UnitOfWork;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,7 +15,7 @@ namespace LogisticsProject.Controllers
     {
 
         [HttpPost(), Authorize(Roles = "Admin")]
-        public ActionResult<StoreRequestDTO> AddStore(StoreRequestDTO storeDto)
+        public ActionResult<StoreRequestDTO> AddStore([FromBody]StoreRequestDTO storeDto)
         {
             Store storeWithStoreName = unitOfWork.Stores.Get(s => s.StoreName == storeDto.StoreName);
             List<Governorate> governorates = unitOfWork.Governorates.GetAll();
@@ -30,7 +31,11 @@ namespace LogisticsProject.Controllers
                 return BadRequest(errorsModel);
             }
 
-            Store store = converter.ConvertStoreRequestDTOToStore(storeDto);
+            User user = unitOfWork.Users.Get(u => u.UserName == storeDto.StoreManagerName);
+
+            Governorate gov = unitOfWork.Governorates.Get(g => g.GovernorateName == storeDto.StoreGovernorateName);
+
+            Store store = converter.ConvertStoreRequestDTOToStore(storeDto, user.UserID, gov.GovernorateID);
 
             unitOfWork.Stores.Save(store);
             unitOfWork.Complete();

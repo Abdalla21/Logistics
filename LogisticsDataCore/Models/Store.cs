@@ -13,5 +13,7 @@
 
         public int StoreGovernorateID { get; set; }
 
+        public int StoreManagerID { get; set; }
+
     }
 }

@@ -2,7 +2,6 @@
 using LogisticsDataCore.DTOs;
 using LogisticsDataCore.Models;
 using LogisticsEntity.PasswordHash;
-using System.Security.Cryptography.X509Certificates;
 
 namespace LogisticsDataCore.DTOsConverter
 {
@@ -27,7 +26,7 @@ namespace LogisticsDataCore.DTOsConverter
             return user;
         }
 
-        public Store ConvertStoreRequestDTOToStore(StoreRequestDTO dto)
+        public Store ConvertStoreRequestDTOToStore(StoreRequestDTO dto, int GovID, int UserID)
         {
 
             Store store = new Store
@@ -35,7 +34,8 @@ namespace LogisticsDataCore.DTOsConverter
                 StoreName = dto.StoreName,
                 StoreCityLocation = dto.StoreCityLocation,
                 StoreDescription = dto.StoreDescription,
-                StoreGovernorateID = dto.StoreGovernorateID,
+                StoreGovernorateID = GovID,
+                StoreManagerID = UserID,
                 CreatedDateTime = DateTime.Now.ToString(GlobalConstants.DateTimeFormat)
             };
 

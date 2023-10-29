@@ -18,6 +18,11 @@ namespace LogisticsDataCore.Models
 
         public string? Role { get; set; }
 
+        public bool IsVerified { get; set; } = false;
+
+        public string? VerificationCode { get; set;}
+
+        public DateTime VerificationCodeExpireDate { get; set; } = DateTime.Now.AddMinutes(10);
 
     }
 }

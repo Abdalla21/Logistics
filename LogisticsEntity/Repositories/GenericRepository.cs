@@ -10,9 +10,7 @@ namespace LogisticsEntity.Repositories
 
         public List<T> GetAll() => applicationDBContext.Set<T>().ToList();
 
-        public void Save(T User)
-        {
-            applicationDBContext.Set<T>().Add(User);
-        }
+        public void Save(T entity) => applicationDBContext.Set<T>().Add(entity);
+
     }
 }

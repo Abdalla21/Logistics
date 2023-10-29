@@ -1,5 +1,4 @@
-﻿using LogisticsDataCore.Interfaces.IRepositories;
-using LogisticsDataCore.Interfaces.IUnitOfWork;
+﻿using LogisticsDataCore.Interfaces.IUnitOfWork;
 using LogisticsDataCore.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

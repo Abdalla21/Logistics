@@ -13,6 +13,11 @@ namespace LogisticsEntity.DBContext
                 .HasOne<Governorate>()
                 .WithMany()
                 .HasForeignKey(store => store.StoreGovernorateID);
+
+            //modelBuilder.Entity<Store>()
+            //    .HasOne<User>()
+            //    .WithM()
+            //    .HasForeignKey(store => store.StoreManagerID);
         }
 
         public DbSet<User> users { get; set; }

@@ -8,7 +8,9 @@
 
         public string StoreDescription { get; set; }
 
-        public int StoreGovernorateID { get; set; }
+        public string StoreGovernorateName { get; set; }
+
+        public string StoreManagerName { get; set; }
 
     }
 }

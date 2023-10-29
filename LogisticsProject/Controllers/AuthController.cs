@@ -1,25 +1,25 @@
 ﻿using LogisticsDataCore.Constants;
 using LogisticsDataCore.DTOs;
 using LogisticsDataCore.DTOsConverter;
-using LogisticsDataCore.Interfaces.IRepositories;
+using LogisticsDataCore.Interfaces.IEmailService;
 using LogisticsDataCore.Interfaces.IUnitOfWork;
 using LogisticsDataCore.Models;
+using LogisticsEntity.EmailService;
 using LogisticsEntity.ModelsAssigner;
 using LogisticsEntity.ModelsFieldsValidator;
-using LogisticsEntity.PasswordAndJWT;
+using LogisticsEntity.PasswordAndTokens;
 using LogisticsEntity.PasswordHash;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 namespace LogisticsProject.Controllers
 {
 
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class AuthController(IConfiguration Configuration, IUnitOfWork unitOfWork) : ControllerBase
+    public class AuthController(IConfiguration Configuration, IUnitOfWork unitOfWork, IEmailService emailService) : ControllerBase
     {
 
         [HttpPost()]
-        public ActionResult Register(UserRequestDTO userRequestDTO)
+        public async Task<ActionResult> Register(UserRequestDTO userRequestDTO)
         {
             DTOsConverter dTOsConverter = new DTOsConverter();
             UserModelFieldsValidator userModelFieldsValidator = new UserModelFieldsValidator();
@@ -42,9 +42,22 @@ namespace LogisticsProject.Controllers
 
             if (statusCode == 200)
             {
+                string EmailVerificationToken = EmailVerification.CreateRandomToken();
+                User userByToken;
+
+                do
+                {
+                    userByToken = unitOfWork.Users.Get(u => u.VerificationCode == EmailVerificationToken);
+                } while (userByToken is not null);
+
                 User user = dTOsConverter.ConvertUserRequestDTOToUser(userRequestDTO);
+                user.VerificationCode = EmailVerificationToken;
                 unitOfWork.Users.Save(user);
                 unitOfWork.Complete();
+
+                string Password = Configuration.GetSection("EmailSender:Password").Value!;
+                await emailService.SendEmailAsync(userRequestDTO.Email, EmailConstants.Subject, EmailConstants.GetEmailVerficationMsg(EmailVerificationToken), Password);
+
                 msgModel.Message = AuthConstants.GetSuccessfullRegistrationMsg(userRequestDTO.UserName);
                 return Ok(msgModel);
             }
@@ -57,7 +70,35 @@ namespace LogisticsProject.Controllers
 
 
         [HttpPost()]
-        public ActionResult<JWTTokenModel> Login(UserResponseDTO user)
+        public ActionResult VerifyEmail([FromQuery] string Code)
+        {
+            MessagesModel messagesModel = new MessagesModel();
+
+            User user = unitOfWork.Users.Get(u => u.VerificationCode == Code);
+
+            if (user is null)
+            {
+                messagesModel.Message = RegisterErrorMessagesConstants.CodeDosntExist;
+                return BadRequest(messagesModel);
+            }
+
+            if (user.VerificationCodeExpireDate < DateTime.Now)
+            {
+                messagesModel.Message = RegisterErrorMessagesConstants.CodeExpired;
+                return BadRequest(messagesModel);
+            }
+
+            user.IsVerified = true;
+
+            unitOfWork.Complete();
+
+            messagesModel.Message = AuthConstants.SuccessfullVerification;
+            return Ok(messagesModel);
+
+        }
+
+        [HttpPost()]
+        public ActionResult Login(UserResponseDTO user)
         {
             MessagesModel msgModel = new MessagesModel();
 
@@ -66,6 +107,13 @@ namespace LogisticsProject.Controllers
             if (userSelected is null)
                 return Unauthorized();
 
+
+            if (userSelected.IsVerified == false)
+            {
+                msgModel.Message = RegisterErrorMessagesConstants.MailNotVerified;
+                return Unauthorized();
+            }
+
             PasswordHash PasswordHash = new PasswordHash();
             bool isVerified = PasswordHash.VerifyPassword(user.Password, userSelected.PasswordHash);
 
@@ -73,7 +121,7 @@ namespace LogisticsProject.Controllers
             {
                 if (userSelected.Role is null)
                 {
-                    msgModel.Message = AuthConstants.UsrNotApproved;
+                    msgModel.Message = RegisterErrorMessagesConstants.UsrNotApproved;
                     return BadRequest(msgModel);
                 }
 
