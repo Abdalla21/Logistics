@@ -15,7 +15,8 @@ namespace LogisticsEntity.PasswordAndJWT
         {
             List<Claim> claimsList = new List<Claim>()
             {
-                new Claim(ClaimTypes.Name, user.UserName)
+                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(ClaimTypes.Role, user.Role!)
             };
 
             SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(PrivateKey));

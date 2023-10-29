@@ -13,7 +13,7 @@ namespace LogisticsProject.Controllers
     public class StoreController(IUnitOfWork unitOfWork) : ControllerBase
     {
 
-        [HttpPost(), Authorize()]
+        [HttpPost(), Authorize(Roles = "Admin")]
         public ActionResult<StoreRequestDTO> AddStore(StoreRequestDTO storeDto)
         {
             Store storeWithStoreName = unitOfWork.Stores.Get(s => s.StoreName == storeDto.StoreName);

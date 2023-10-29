@@ -18,7 +18,7 @@ namespace LogisticsProject.Controllers
         }
 
 
-        [HttpGet(), Authorize()]
+        [HttpGet(), Authorize(Roles = "Admin")]
         public ActionResult<List<Role>> GetRoles()
         {
             return Ok(unitOfWork.Roles.GetAll());
