@@ -90,38 +90,38 @@ namespace LogisticsEntity.ModelsFieldsValidator
         }
 
 
-        public ErrorsModel ValidateUserFields(UserRequestDTO userRequestDTO, out int StatusCode)
+        public MessagesModel ValidateUserFields(UserRequestDTO userRequestDTO, out int StatusCode)
         {
 
-            ErrorsModel registerErrorsModel = new ErrorsModel();
+            MessagesModel registerErrorsModel = new MessagesModel();
 
             if (!IsValidEmail(userRequestDTO.Email))
             {
-                registerErrorsModel.ErrorMessage = RegisterErrorMessagesConstants.EmailNotValid;
+                registerErrorsModel.Message = RegisterErrorMessagesConstants.EmailNotValid;
                 StatusCode = AuthConstants.EmailNotValidStatusCode;
                 return registerErrorsModel;
             }
             else if (!IsValidAge(userRequestDTO.Age))
             {
-                registerErrorsModel.ErrorMessage = RegisterErrorMessagesConstants.AgeNotValid;
+                registerErrorsModel.Message = RegisterErrorMessagesConstants.AgeNotValid;
                 StatusCode = AuthConstants.AgeNotValidStatusCode;
                 return registerErrorsModel;
             }
             else if (!IsValidUsername(userRequestDTO.UserName))
             {
-                registerErrorsModel.ErrorMessage = RegisterErrorMessagesConstants.UsernameNotValid;
+                registerErrorsModel.Message = RegisterErrorMessagesConstants.UsernameNotValid;
                 StatusCode = AuthConstants.UsernameNotValidStatusCode;
                 return registerErrorsModel;
             }
             else if (!IsValidPhone(userRequestDTO.Phone))
             {
-                registerErrorsModel.ErrorMessage = RegisterErrorMessagesConstants.PhoneNotValid;
+                registerErrorsModel.Message = RegisterErrorMessagesConstants.PhoneNotValid;
                 StatusCode = AuthConstants.PhoneNotValidStatusCode;
                 return registerErrorsModel;
             }
             else if (!IsValidPassword(userRequestDTO.Password))
             {
-                registerErrorsModel.ErrorMessage = RegisterErrorMessagesConstants.PasswordNotValid;
+                registerErrorsModel.Message = RegisterErrorMessagesConstants.PasswordNotValid;
                 StatusCode = AuthConstants.PasswordNotValidStatusCode;
                 return registerErrorsModel;
             }

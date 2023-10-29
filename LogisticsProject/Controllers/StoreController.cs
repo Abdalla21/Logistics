@@ -23,7 +23,7 @@ namespace LogisticsProject.Controllers
             DTOsConverter converter = new DTOsConverter();
             int StatusCode = 0;
 
-            ErrorsModel errorsModel = storeCreationValidator.ValidateStore(storeDto, storeWithStoreName, governorates, out StatusCode);
+            MessagesModel errorsModel = storeCreationValidator.ValidateStore(storeDto, storeWithStoreName, governorates, out StatusCode);
 
             if (StatusCode == 400)
             {

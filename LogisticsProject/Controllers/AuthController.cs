@@ -24,7 +24,7 @@ namespace LogisticsProject.Controllers
             DTOsConverter dTOsConverter = new DTOsConverter();
             UserModelFieldsValidator userModelFieldsValidator = new UserModelFieldsValidator();
             ModelsAssigner modelsAssigner = new ModelsAssigner();
-            SuccessModel successModel = new SuccessModel();
+            MessagesModel msgModel = new MessagesModel();
 
             User userByEmail = unitOfWork.Users.Get(user => user.Email == userRequestDTO.Email);
 
@@ -38,16 +38,15 @@ namespace LogisticsProject.Controllers
             if (userByUserName != null)
                 return StatusCode(AuthConstants.UserExistsStatusCode, modelsAssigner.AssignErrorMessage(RegisterErrorMessagesConstants.UserNameAlreadyExists));
 
-
-            ErrorsModel registerErrorsModel = userModelFieldsValidator.ValidateUserFields(userRequestDTO, out statusCode);
+            MessagesModel registerErrorsModel = userModelFieldsValidator.ValidateUserFields(userRequestDTO, out statusCode);
 
             if (statusCode == 200)
             {
                 User user = dTOsConverter.ConvertUserRequestDTOToUser(userRequestDTO);
                 unitOfWork.Users.Save(user);
                 unitOfWork.Complete();
-                successModel.SuccessMsg = AuthConstants.GetSuccessfullRegistrationMsg(userRequestDTO.UserName);
-                return Ok(successModel);
+                msgModel.Message = AuthConstants.GetSuccessfullRegistrationMsg(userRequestDTO.UserName);
+                return Ok(msgModel);
             }
             else
             {

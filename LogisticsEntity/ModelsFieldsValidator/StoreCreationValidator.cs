@@ -8,24 +8,24 @@ namespace LogisticsEntity.ModelsFieldsValidator
     public class StoreCreationValidator : IStoreCreationValidator
     {
 
-        public ErrorsModel ValidateStore(StoreRequestDTO storeDto, Store store, List<Governorate> Govs, out int StatusCode)
+        public MessagesModel ValidateStore(StoreRequestDTO storeDto, Store store, List<Governorate> Govs, out int StatusCode)
         {
-            ErrorsModel errorsModel = new ErrorsModel();
+            MessagesModel errorsModel = new MessagesModel();
 
             if (store is not null)
             {
-                errorsModel.ErrorMessage = StoreErrors.StoreExistsError;
+                errorsModel.Message = StoreErrors.StoreExistsError;
                 StatusCode = 400;
                 return errorsModel;
             }
             else if (!IsGovernorateIDExists(Govs, storeDto.StoreGovernorateID))
             {
-                errorsModel.ErrorMessage = StoreErrors.InvalidStoreGovID;
+                errorsModel.Message = StoreErrors.InvalidStoreGovID;
                 StatusCode = 400;
                 return errorsModel;
             }else if (storeDto.StoreName is null)
             {
-                errorsModel.ErrorMessage = StoreErrors.StoreNameCantBeEmpty;
+                errorsModel.Message = StoreErrors.StoreNameCantBeEmpty;
                 StatusCode = 400;
                 return errorsModel;
             }

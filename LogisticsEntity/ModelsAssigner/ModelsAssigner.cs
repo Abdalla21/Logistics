@@ -19,11 +19,11 @@ namespace LogisticsEntity.ModelsAssigner
             return tokenModel;
         }
 
-        public ErrorsModel AssignErrorMessage(string Msg)
+        public MessagesModel AssignErrorMessage(string Msg)
         {
-            ErrorsModel registerErrorsModel = new ErrorsModel();
+            MessagesModel registerErrorsModel = new MessagesModel();
 
-            registerErrorsModel.ErrorMessage = Msg;
+            registerErrorsModel.Message = Msg;
 
             return registerErrorsModel;
         }
