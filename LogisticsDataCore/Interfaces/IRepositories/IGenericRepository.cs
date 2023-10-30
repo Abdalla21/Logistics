@@ -9,7 +9,8 @@ namespace LogisticsDataCore.Interfaces.IRepositories
 
         T Get(Expression<Func<T, bool>> Match);
 
-        public List<T> GetAll();
+        List<T> GetAll();
 
+        void Delete(Expression<Func<T, bool>> Match);
     }
 }

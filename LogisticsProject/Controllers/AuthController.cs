@@ -1,15 +1,15 @@
 ﻿using LogisticsDataCore.Constants;
 using LogisticsDataCore.DTOs;
-using LogisticsDataCore.DTOsConverter;
 using LogisticsDataCore.Interfaces.IEmailService;
 using LogisticsDataCore.Interfaces.IUnitOfWork;
 using LogisticsDataCore.Models;
-using LogisticsEntity.EmailService;
 using LogisticsEntity.ModelsAssigner;
 using LogisticsEntity.ModelsFieldsValidator;
 using LogisticsEntity.PasswordAndTokens;
-using LogisticsEntity.PasswordHash;
+using LogisticsEntity.Password;
 using Microsoft.AspNetCore.Mvc;
+using LogisticsEntity.DTOsConverter;
+
 namespace LogisticsProject.Controllers
 {
 
@@ -21,7 +21,7 @@ namespace LogisticsProject.Controllers
         [HttpPost()]
         public async Task<ActionResult> Register(UserRequestDTO userRequestDTO)
         {
-            DTOsConverter dTOsConverter = new DTOsConverter();
+            UserDTOsConverter dTOsConverter = new UserDTOsConverter();
             UserModelFieldsValidator userModelFieldsValidator = new UserModelFieldsValidator();
             ModelsAssigner modelsAssigner = new ModelsAssigner();
             MessagesModel msgModel = new MessagesModel();
@@ -89,6 +89,7 @@ namespace LogisticsProject.Controllers
             }
 
             user.IsVerified = true;
+            user.VerificationCode = null;
 
             unitOfWork.Complete();
 

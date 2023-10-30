@@ -14,18 +14,18 @@ namespace LogisticsEntity.ModelsFieldsValidator
 
             if (store is not null)
             {
-                errorsModel.Message = StoreErrors.StoreExistsError;
+                errorsModel.Message = StoreMessages.StoreExistsError;
                 StatusCode = 400;
                 return errorsModel;
             }
             else if (!IsGovernorateIDExists(Govs, storeDto.StoreGovernorateName))
             {
-                errorsModel.Message = StoreErrors.InvalidStoreGovID;
+                errorsModel.Message = StoreMessages.InvalidStoreGovID;
                 StatusCode = 400;
                 return errorsModel;
             }else if (storeDto.StoreName is null)
             {
-                errorsModel.Message = StoreErrors.StoreNameCantBeEmpty;
+                errorsModel.Message = StoreMessages.StoreNameCantBeEmpty;
                 StatusCode = 400;
                 return errorsModel;
             }

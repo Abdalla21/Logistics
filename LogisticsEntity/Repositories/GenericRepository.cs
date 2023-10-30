@@ -4,13 +4,19 @@ using System.Linq.Expressions;
 
 namespace LogisticsEntity.Repositories
 {
-    public class GenericRepository<T>(ApplicationDBContext applicationDBContext) : IGenericRepository<T> where T : class
+    public class GenericRepository<T>(ApplicationDBContext context) : IGenericRepository<T> where T : class
     {
-        public T Get(Expression<Func<T, bool>> Match) => applicationDBContext.Set<T>().FirstOrDefault(Match);
+        public void Delete(Expression<Func<T, bool>> Match)
+        {
+            T entity = Get(Match);
+            context.Set<T>().Remove(entity);
+        }
 
-        public List<T> GetAll() => applicationDBContext.Set<T>().ToList();
+        public T Get(Expression<Func<T, bool>> Match) => context.Set<T>().FirstOrDefault(Match);
 
-        public void Save(T entity) => applicationDBContext.Set<T>().Add(entity);
+        public List<T> GetAll() => context.Set<T>().ToList();
+
+        public void Save(T entity) => context.Set<T>().Add(entity);
 
     }
 }

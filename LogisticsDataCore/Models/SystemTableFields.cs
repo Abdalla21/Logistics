@@ -1,7 +1,9 @@
-﻿namespace LogisticsDataCore.Models
+﻿using LogisticsDataCore.Constants;
+
+namespace LogisticsDataCore.Models
 {
     public class SystemTableFields
     {
-        public required string CreatedDateTime { get; set; }
+        public string CreatedDateTime { get; set; } = DateTime.Now.ToString(GlobalConstants.DateTimeFormat);
     }
 }

@@ -2,6 +2,8 @@
 {
     public class StoreRequestDTO
     {
+        public int StoreID { get; set; }
+
         public string StoreName { get; set; }
 
         public string StoreCityLocation { get; set; }

@@ -1,6 +1,6 @@
 ﻿using LogisticsDataCore.Interfaces.IPasswordAndJWT;
 
-namespace LogisticsEntity.PasswordHash
+namespace LogisticsEntity.Password
 {
     public class PasswordHash : IPasswordHash
     {
