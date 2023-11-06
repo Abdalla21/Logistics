@@ -8,7 +8,7 @@
 
         public readonly static string InvalidStoreGovID = "Invalid Governorate.";
 
-        public readonly static string CantDeleteStore = "This Store ID Not Exists.";
+        public readonly static string CantDeleteStore = "Invalid Store ID.";
 
         public readonly static string StoreDeleted = "Store Deleted Successfuly.";
     }

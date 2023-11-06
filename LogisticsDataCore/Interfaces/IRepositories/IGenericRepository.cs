@@ -7,7 +7,9 @@ namespace LogisticsDataCore.Interfaces.IRepositories
     {
         void Save(T entity);
 
-        T Get(Expression<Func<T, bool>> Match);
+        T GetSingle(Expression<Func<T, bool>> Match);
+
+        List<T> GetManyWhere(Expression<Func<T, bool>> Match);
 
         List<T> GetAll();
 

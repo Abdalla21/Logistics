@@ -17,7 +17,7 @@ namespace LogisticsProject.Controllers
         [HttpPost(), Authorize(Roles = "Admin")]
         public ActionResult<StoreRequestDTO> AddStore([FromBody]StoreRequestDTO storeDto)
         {
-            Store storeWithStoreName = unitOfWork.Stores.Get(s => s.StoreName == storeDto.StoreName);
+            Store storeWithStoreName = unitOfWork.Stores.GetSingle(s => s.StoreName == storeDto.StoreName);
             List<Governorate> governorates = unitOfWork.Governorates.GetAll();
 
             StoreCreationValidator storeCreationValidator = new StoreCreationValidator();
@@ -31,9 +31,9 @@ namespace LogisticsProject.Controllers
                 return BadRequest(errorsModel);
             }
 
-            User user = unitOfWork.Users.Get(u => u.UserName == storeDto.StoreManagerName);
+            User user = unitOfWork.Users.GetSingle(u => u.UserName == storeDto.StoreManagerName);
 
-            Governorate gov = unitOfWork.Governorates.Get(g => g.GovernorateName == storeDto.StoreGovernorateName);
+            Governorate gov = unitOfWork.Governorates.GetSingle(g => g.GovernorateName == storeDto.StoreGovernorateName);
 
             Store store = converter.ConvertStoreRequestDTOToStore(storeDto, user.UserID, gov.GovernorateID);
 
@@ -55,8 +55,8 @@ namespace LogisticsProject.Controllers
             foreach(Store store in stores)
             {
 
-                User user = unitOfWork.Users.Get(u => u.UserID == store.StoreManagerID);
-                Governorate gov = unitOfWork.Governorates.Get(g => g.GovernorateID == store.StoreGovernorateID);
+                User user = unitOfWork.Users.GetSingle(u => u.UserID == store.StoreManagerID);
+                Governorate gov = unitOfWork.Governorates.GetSingle(g => g.GovernorateID == store.StoreGovernorateID);
 
                 storeRequestDTOs.Add(dTOsConverter.ConvertStoreToStoreDto(store, user.UserName, gov.GovernorateName));
             }

@@ -26,14 +26,14 @@ namespace LogisticsProject.Controllers
             ModelsAssigner modelsAssigner = new ModelsAssigner();
             MessagesModel msgModel = new MessagesModel();
 
-            User userByEmail = unitOfWork.Users.Get(user => user.Email == userRequestDTO.Email);
+            User userByEmail = unitOfWork.Users.GetSingle(user => user.Email == userRequestDTO.Email);
 
             int statusCode = 0;
 
             if (userByEmail != null)
                 return StatusCode(AuthConstants.EmailExistsStatusCode, modelsAssigner.AssignErrorMessage(RegisterErrorMessagesConstants.EmailAlreadyExists));
 
-            User userByUserName = unitOfWork.Users.Get(user => user.UserName == userRequestDTO.UserName);
+            User userByUserName = unitOfWork.Users.GetSingle(user => user.UserName == userRequestDTO.UserName);
 
             if (userByUserName != null)
                 return StatusCode(AuthConstants.UserExistsStatusCode, modelsAssigner.AssignErrorMessage(RegisterErrorMessagesConstants.UserNameAlreadyExists));
@@ -47,7 +47,7 @@ namespace LogisticsProject.Controllers
 
                 do
                 {
-                    userByToken = unitOfWork.Users.Get(u => u.VerificationCode == EmailVerificationToken);
+                    userByToken = unitOfWork.Users.GetSingle(u => u.VerificationCode == EmailVerificationToken);
                 } while (userByToken is not null);
 
                 User user = dTOsConverter.ConvertUserRequestDTOToUser(userRequestDTO);
@@ -74,7 +74,7 @@ namespace LogisticsProject.Controllers
         {
             MessagesModel messagesModel = new MessagesModel();
 
-            User user = unitOfWork.Users.Get(u => u.VerificationCode == Code);
+            User user = unitOfWork.Users.GetSingle(u => u.VerificationCode == Code);
 
             if (user is null)
             {
@@ -103,7 +103,7 @@ namespace LogisticsProject.Controllers
         {
             MessagesModel msgModel = new MessagesModel();
 
-            User userSelected = unitOfWork.Users.Get(u => u.Email == user.Email);
+            User userSelected = unitOfWork.Users.GetSingle(u => u.Email == user.Email);
 
             if (userSelected is null)
                 return Unauthorized();
