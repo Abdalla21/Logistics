@@ -13,6 +13,8 @@ namespace LogisticsDataCore.Interfaces.IRepositories
 
         List<T> GetAll();
 
-        void Delete(Expression<Func<T, bool>> Match);
+        void DeleteSingle(Expression<Func<T, bool>> Match);
+
+        Task<int> DeleteAll();
     }
 }

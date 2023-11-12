@@ -70,7 +70,7 @@ namespace LogisticsProject.Controllers
         {
             MessagesModel messagesModel = new MessagesModel();
 
-            unitOfWork.Stores.Delete(s => s.StoreID == ID);
+            unitOfWork.Stores.DeleteSingle(s => s.StoreID == ID);
             int count = unitOfWork.Complete();
 
             if (count == 0)
