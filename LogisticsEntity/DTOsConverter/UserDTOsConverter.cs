@@ -4,9 +4,9 @@ using LogisticsEntity.Password;
 
 namespace LogisticsEntity.DTOsConverter
 {
-    public class UserDTOsConverter
+    public static class UserDTOsConverter
     {
-        public User ConvertUserRequestDTOToUser(UserRequestDTO dto)
+        public static User ConvertUserRequestDTOToUser(this UserRequestDTO dto)
         {
             PasswordHash passwordHashClass = new PasswordHash();
 

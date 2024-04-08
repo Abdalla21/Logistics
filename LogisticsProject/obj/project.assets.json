@@ -3452,23 +3452,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Abdalla\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsProject\\LogisticsProject.csproj",
+      "projectUniqueName": "G:\\.Net Study\\Logistics\\LogisticsProject\\LogisticsProject.csproj",
       "projectName": "LogisticsProject",
-      "projectPath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsProject\\LogisticsProject.csproj",
-      "packagesPath": "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsProject\\obj\\",
+      "projectPath": "G:\\.Net Study\\Logistics\\LogisticsProject\\LogisticsProject.csproj",
+      "packagesPath": "C:\\Users\\Abdalla\\.nuget\\packages\\",
+      "outputPath": "G:\\.Net Study\\Logistics\\LogisticsProject\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\abdalla.ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Abdalla\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3482,8 +3478,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsEntity\\LogisticsEntity.csproj": {
-              "projectPath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsEntity\\LogisticsEntity.csproj"
+            "G:\\.Net Study\\Logistics\\LogisticsEntity\\LogisticsEntity.csproj": {
+              "projectPath": "G:\\.Net Study\\Logistics\\LogisticsEntity\\LogisticsEntity.csproj"
             }
           }
         }
@@ -3492,6 +3488,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3540,7 +3541,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

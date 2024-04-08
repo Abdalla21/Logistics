@@ -7,10 +7,12 @@ namespace LogisticsEntity.Repositories
 {
     public class GenericRepository<T>(ApplicationDBContext context) : IGenericRepository<T> where T : class
     {
+        // Need to check for null result after getting the entityRecord
+        // and return success or fail.
         public void DeleteSingle(Expression<Func<T, bool>> Match)
         {
-            T entity = GetSingle(Match);
-            context.Set<T>().Remove(entity);
+            T? entityRecord = GetSingle(Match);
+            context.Set<T>().Remove(entityRecord!);
         }
 
         public async Task<int> DeleteAll()
@@ -19,7 +21,14 @@ namespace LogisticsEntity.Repositories
             return count;
         }
 
-        public T GetSingle(Expression<Func<T, bool>> Match) => context.Set<T>().FirstOrDefault(Match);
+        public T? GetSingle(Expression<Func<T, bool>> Match) {
+            var singleRecord = context.Set<T>().FirstOrDefault(Match);
+
+            if (singleRecord is not null)
+                return singleRecord;
+            else
+                return null;
+            }
 
         public List<T> GetAll() => context.Set<T>().ToList();
 

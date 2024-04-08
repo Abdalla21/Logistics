@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "5/9wGONdI7ChJwOUpoFqcTbgWwuUuYlWDiu7tJxxtpFEz/TosNP34XFmK0w3yRbd9hQef9qu4/HfkT5xpCi3Zg==",
+  "dgSpecHash": "h1RF2xJlAMJATThvZtCGS1nNR+PdWXm9s4smCJtGHTBMGmhbNqRoZfIVvdjD8UqgveUIidv0bZGNY5pTptYGkg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsDataCore\\LogisticsDataCore.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "G:\\.Net Study\\Logistics\\LogisticsDataCore\\LogisticsDataCore.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Abdalla\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.16\\microsoft.windowsdesktop.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\Abdalla\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.16\\microsoft.netcore.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\Abdalla\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.16\\microsoft.aspnetcore.app.ref.7.0.16.nupkg.sha512"
+  ],
   "logs": []
 }

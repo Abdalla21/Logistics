@@ -21,7 +21,6 @@ namespace LogisticsProject.Controllers
         [HttpPost()]
         public async Task<ActionResult> Register(UserRequestDTO userRequestDTO)
         {
-            UserDTOsConverter dTOsConverter = new UserDTOsConverter();
             UserModelFieldsValidator userModelFieldsValidator = new UserModelFieldsValidator();
             ModelsAssigner modelsAssigner = new ModelsAssigner();
             MessagesModel msgModel = new MessagesModel();
@@ -50,7 +49,7 @@ namespace LogisticsProject.Controllers
                     userByToken = unitOfWork.Users.GetSingle(u => u.VerificationCode == EmailVerificationToken);
                 } while (userByToken is not null);
 
-                User user = dTOsConverter.ConvertUserRequestDTOToUser(userRequestDTO);
+                User user = userRequestDTO.ConvertUserRequestDTOToUser();
                 user.VerificationCode = EmailVerificationToken;
                 unitOfWork.Users.Save(user);
                 unitOfWork.Complete();

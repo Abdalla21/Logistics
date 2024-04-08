@@ -21,7 +21,6 @@ namespace LogisticsProject.Controllers
             List<Governorate> governorates = unitOfWork.Governorates.GetAll();
 
             StoreCreationValidator storeCreationValidator = new StoreCreationValidator();
-            StoreDTOsConverter converter = new StoreDTOsConverter();
             int StatusCode = 0;
 
             MessagesModel errorsModel = storeCreationValidator.ValidateStore(storeDto, storeWithStoreName, governorates, out StatusCode);
@@ -35,7 +34,7 @@ namespace LogisticsProject.Controllers
 
             Governorate gov = unitOfWork.Governorates.GetSingle(g => g.GovernorateName == storeDto.StoreGovernorateName);
 
-            Store store = converter.ConvertStoreRequestDTOToStore(storeDto, user.UserID, gov.GovernorateID);
+            Store store = storeDto.ConvertStoreRequestDTOToStore(user.UserID, gov.GovernorateID);
 
             unitOfWork.Stores.Save(store);
             unitOfWork.Complete();
@@ -47,7 +46,6 @@ namespace LogisticsProject.Controllers
         [HttpGet(), Authorize()]
         public ActionResult<List<StoreRequestDTO>> GetStores()
         {
-            StoreDTOsConverter dTOsConverter = new StoreDTOsConverter();
             List<StoreRequestDTO> storeRequestDTOs = new List<StoreRequestDTO>();
 
             List<Store> stores = unitOfWork.Stores.GetAll();
@@ -58,7 +56,7 @@ namespace LogisticsProject.Controllers
                 User user = unitOfWork.Users.GetSingle(u => u.UserID == store.StoreManagerID);
                 Governorate gov = unitOfWork.Governorates.GetSingle(g => g.GovernorateID == store.StoreGovernorateID);
 
-                storeRequestDTOs.Add(dTOsConverter.ConvertStoreToStoreDto(store, user.UserName, gov.GovernorateName));
+                storeRequestDTOs.Add(store.ConvertStoreToStoreDto(user.UserName, gov.GovernorateName));
             }
 
             return Ok(storeRequestDTOs);

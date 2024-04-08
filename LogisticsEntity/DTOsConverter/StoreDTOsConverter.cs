@@ -3,9 +3,9 @@ using LogisticsDataCore.Models;
 
 namespace LogisticsDataCore.DTOsConverter
 {
-    public class StoreDTOsConverter
+    public static class StoreDTOsConverter
     {
-        public Store ConvertStoreRequestDTOToStore(StoreRequestDTO dto, int GovID, int UserID)
+        public static Store ConvertStoreRequestDTOToStore(this StoreRequestDTO dto, int GovID, int UserID)
         {
 
             Store store = new Store
@@ -20,7 +20,7 @@ namespace LogisticsDataCore.DTOsConverter
             return store;
         }
 
-        public StoreRequestDTO ConvertStoreToStoreDto(Store store, string username, string govName)
+        public static StoreRequestDTO ConvertStoreToStoreDto(this Store store, string username, string govName)
         {
 
             StoreRequestDTO storeDto = new StoreRequestDTO

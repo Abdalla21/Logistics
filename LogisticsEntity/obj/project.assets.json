@@ -2850,23 +2850,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Abdalla\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsEntity\\LogisticsEntity.csproj",
+      "projectUniqueName": "G:\\.Net Study\\Logistics\\LogisticsEntity\\LogisticsEntity.csproj",
       "projectName": "LogisticsEntity",
-      "projectPath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsEntity\\LogisticsEntity.csproj",
-      "packagesPath": "C:\\Users\\abdalla.ahmed\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsEntity\\obj\\",
+      "projectPath": "G:\\.Net Study\\Logistics\\LogisticsEntity\\LogisticsEntity.csproj",
+      "packagesPath": "C:\\Users\\Abdalla\\.nuget\\packages\\",
+      "outputPath": "G:\\.Net Study\\Logistics\\LogisticsEntity\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\abdalla.ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Abdalla\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2880,8 +2876,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsDataCore\\LogisticsDataCore.csproj": {
-              "projectPath": "C:\\Users\\abdalla.ahmed\\source\\repos\\LogisticsProjectTraining\\Logistics\\LogisticsDataCore\\LogisticsDataCore.csproj"
+            "G:\\.Net Study\\Logistics\\LogisticsDataCore\\LogisticsDataCore.csproj": {
+              "projectPath": "G:\\.Net Study\\Logistics\\LogisticsDataCore\\LogisticsDataCore.csproj"
             }
           }
         }
@@ -2890,6 +2886,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2943,8 +2944,30 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.IdentityModel.Tokens.Jwt' 7.0.2 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
+      "libraryId": "System.IdentityModel.Tokens.Jwt",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.IdentityModel.Tokens.Jwt' 7.0.2 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-8g9c-28fc-mcx2",
+      "libraryId": "System.IdentityModel.Tokens.Jwt",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

@@ -32,3 +32,21 @@ C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\Logistics
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsEntity\obj\Debug\net7.0\LogisticsEntity.pdb
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsEntity\obj\Debug\net7.0\LogisticsEntity.genruntimeconfig.cache
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsEntity\obj\Debug\net7.0\ref\LogisticsEntity.dll
+G:\.Net Study\Logistics\LogisticsEntity\bin\Debug\net7.0\LogisticsEntity.deps.json
+G:\.Net Study\Logistics\LogisticsEntity\bin\Debug\net7.0\LogisticsEntity.runtimeconfig.json
+G:\.Net Study\Logistics\LogisticsEntity\bin\Debug\net7.0\LogisticsEntity.dll
+G:\.Net Study\Logistics\LogisticsEntity\bin\Debug\net7.0\LogisticsEntity.pdb
+G:\.Net Study\Logistics\LogisticsEntity\bin\Debug\net7.0\LogisticsDataCore.dll
+G:\.Net Study\Logistics\LogisticsEntity\bin\Debug\net7.0\LogisticsDataCore.pdb
+G:\.Net Study\Logistics\LogisticsEntity\obj\Debug\net7.0\LogisticsEntity.csproj.AssemblyReference.cache
+G:\.Net Study\Logistics\LogisticsEntity\obj\Debug\net7.0\LogisticsEntity.GeneratedMSBuildEditorConfig.editorconfig
+G:\.Net Study\Logistics\LogisticsEntity\obj\Debug\net7.0\LogisticsEntity.AssemblyInfoInputs.cache
+G:\.Net Study\Logistics\LogisticsEntity\obj\Debug\net7.0\LogisticsEntity.AssemblyInfo.cs
+G:\.Net Study\Logistics\LogisticsEntity\obj\Debug\net7.0\LogisticsEntity.csproj.CoreCompileInputs.cache
+G:\.Net Study\Logistics\LogisticsEntity\obj\Debug\net7.0\LogisticsEntity.sourcelink.json
+G:\.Net Study\Logistics\LogisticsEntity\obj\Debug\net7.0\Logistic.6FAE7130.Up2Date
+G:\.Net Study\Logistics\LogisticsEntity\obj\Debug\net7.0\LogisticsEntity.dll
+G:\.Net Study\Logistics\LogisticsEntity\obj\Debug\net7.0\refint\LogisticsEntity.dll
+G:\.Net Study\Logistics\LogisticsEntity\obj\Debug\net7.0\LogisticsEntity.pdb
+G:\.Net Study\Logistics\LogisticsEntity\obj\Debug\net7.0\LogisticsEntity.genruntimeconfig.cache
+G:\.Net Study\Logistics\LogisticsEntity\obj\Debug\net7.0\ref\LogisticsEntity.dll

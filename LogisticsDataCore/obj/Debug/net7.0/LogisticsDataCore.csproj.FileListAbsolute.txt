@@ -20,3 +20,15 @@ C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\Logistics
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsDataCore\obj\Debug\net7.0\refint\LogisticsDataCore.dll
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsDataCore\obj\Debug\net7.0\LogisticsDataCore.pdb
 C:\Users\abdalla.ahmed\source\repos\LogisticsProjectTraining\Logistics\LogisticsDataCore\obj\Debug\net7.0\ref\LogisticsDataCore.dll
+G:\.Net Study\Logistics\LogisticsDataCore\bin\Debug\net7.0\LogisticsDataCore.deps.json
+G:\.Net Study\Logistics\LogisticsDataCore\bin\Debug\net7.0\LogisticsDataCore.dll
+G:\.Net Study\Logistics\LogisticsDataCore\bin\Debug\net7.0\LogisticsDataCore.pdb
+G:\.Net Study\Logistics\LogisticsDataCore\obj\Debug\net7.0\LogisticsDataCore.GeneratedMSBuildEditorConfig.editorconfig
+G:\.Net Study\Logistics\LogisticsDataCore\obj\Debug\net7.0\LogisticsDataCore.AssemblyInfoInputs.cache
+G:\.Net Study\Logistics\LogisticsDataCore\obj\Debug\net7.0\LogisticsDataCore.AssemblyInfo.cs
+G:\.Net Study\Logistics\LogisticsDataCore\obj\Debug\net7.0\LogisticsDataCore.csproj.CoreCompileInputs.cache
+G:\.Net Study\Logistics\LogisticsDataCore\obj\Debug\net7.0\LogisticsDataCore.sourcelink.json
+G:\.Net Study\Logistics\LogisticsDataCore\obj\Debug\net7.0\LogisticsDataCore.dll
+G:\.Net Study\Logistics\LogisticsDataCore\obj\Debug\net7.0\refint\LogisticsDataCore.dll
+G:\.Net Study\Logistics\LogisticsDataCore\obj\Debug\net7.0\LogisticsDataCore.pdb
+G:\.Net Study\Logistics\LogisticsDataCore\obj\Debug\net7.0\ref\LogisticsDataCore.dll
