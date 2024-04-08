@@ -1,18 +1,11 @@
 ﻿namespace LogisticsDataCore.DTOs
 {
-    public class StoreRequestDTO
-    {
-        public int StoreID { get; set; }
-
-        public string StoreName { get; set; }
-
-        public string StoreCityLocation { get; set; }
-
-        public string StoreDescription { get; set; }
-
-        public string StoreGovernorateName { get; set; }
-
-        public string StoreManagerName { get; set; }
-
-    }
+    public record StoreRequestDTO(
+        int StoreID,
+        string StoreName,
+        string StoreCityLocation,
+        string StoreDescription,
+        string StoreGovernorateName,
+        string StoreManagerName
+    );
 }

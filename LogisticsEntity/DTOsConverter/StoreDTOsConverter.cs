@@ -24,14 +24,14 @@ namespace LogisticsDataCore.DTOsConverter
         {
 
             StoreRequestDTO storeDto = new StoreRequestDTO
-            {
-                StoreID = store.StoreID,
-                StoreName = store.StoreName,
-                StoreCityLocation = store.StoreCityLocation,
-                StoreDescription = store.StoreDescription,
-                StoreGovernorateName = govName,
-                StoreManagerName = username,
-            };
+            (
+                store.StoreID,
+                store.StoreName,
+                store.StoreCityLocation,
+                store.StoreDescription,
+                govName,
+                username
+            );
 
             return storeDto;
 

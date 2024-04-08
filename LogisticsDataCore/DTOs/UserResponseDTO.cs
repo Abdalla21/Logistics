@@ -1,10 +1,5 @@
 ﻿namespace LogisticsDataCore.DTOs
 {
-    public class UserResponseDTO
-    {
-        public string Email { get; set; }
+    public record UserResponseDTO(string Email, string Password);
 
-        public string Password { get; set; }
-
-    }
 }
