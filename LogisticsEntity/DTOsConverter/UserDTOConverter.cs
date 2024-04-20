@@ -1,4 +1,4 @@
-﻿using LogisticsDataCore.DTOs;
+﻿using LogisticsDataCore.DTOs.UserDTOs;
 using LogisticsDataCore.Tables;
 using LogisticsEntity.Password;
 
@@ -22,6 +22,25 @@ namespace LogisticsEntity.DTOsConverter
             };
 
             return user;
+        }
+
+        public static List<UserDTO> ConvertUsersToUsersDTO(List<User> users)
+        {
+            List<UserDTO> usersDTO = new List<UserDTO>();
+
+            foreach (User user in users)
+            {
+                usersDTO.Add(
+                    new UserDTO(
+                        user.UserName,
+                        user.Role,
+                        user.Age,
+                        user.Email,
+                        user.Phone)
+                    );
+            }
+
+            return usersDTO;
         }
     }
 }

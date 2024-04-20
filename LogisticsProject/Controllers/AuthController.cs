@@ -1,5 +1,4 @@
 ﻿using LogisticsDataCore.Constants;
-using LogisticsDataCore.DTOs;
 using LogisticsDataCore.Interfaces.IEmailService;
 using LogisticsDataCore.Interfaces.IUnitOfWork;
 using LogisticsDataCore.Models;
@@ -10,6 +9,7 @@ using LogisticsEntity.Password;
 using Microsoft.AspNetCore.Mvc;
 using LogisticsEntity.DTOsConverter;
 using LogisticsDataCore.Tables;
+using LogisticsDataCore.DTOs.UserDTOs;
 
 namespace LogisticsProject.Controllers
 {
@@ -105,15 +105,14 @@ namespace LogisticsProject.Controllers
             if (userSelected is null)
                 return Unauthorized();
 
+            PasswordHash PasswordHash = new PasswordHash();
+            bool isVerified = PasswordHash.VerifyPassword(user.Password, userSelected.PasswordHash);
 
             if (userSelected.IsVerified == false)
             {
                 msgModel.Message = RegisterErrorMessagesConstants.MailNotVerified;
                 return Unauthorized(msgModel);
             }
-
-            PasswordHash PasswordHash = new PasswordHash();
-            bool isVerified = PasswordHash.VerifyPassword(user.Password, userSelected.PasswordHash);
 
             if (isVerified)
             {

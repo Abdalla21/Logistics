@@ -20,6 +20,8 @@
 
         public string? VerificationCode { get; set; }
 
+        public string? IsAccepted { get; set; }
+
         public DateTime? VerificationCodeExpireDate { get; set; } = DateTime.Now.AddMinutes(10);
 
     }

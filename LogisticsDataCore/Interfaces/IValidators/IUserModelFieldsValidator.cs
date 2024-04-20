@@ -1,4 +1,4 @@
-﻿using LogisticsDataCore.DTOs;
+﻿using LogisticsDataCore.DTOs.UserDTOs;
 using LogisticsDataCore.Models;
 
 namespace LogisticsDataCore.Interfaces.IValidators

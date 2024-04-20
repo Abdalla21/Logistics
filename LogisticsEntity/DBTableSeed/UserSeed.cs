@@ -11,6 +11,7 @@ namespace LogisticsEntity.DBTableSeed
         {
             PasswordHash hash = new PasswordHash();
 
+            // Need to change password after ppublishing the project
             modelBuilder.Entity<User>().HasData(
                    new User() {
                        UserID = 1,

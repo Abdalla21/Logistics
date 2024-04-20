@@ -1,5 +1,5 @@
 ﻿using LogisticsDataCore.Constants;
-using LogisticsDataCore.DTOs;
+using LogisticsDataCore.DTOs.UserDTOs;
 using LogisticsDataCore.Interfaces.IValidators;
 using LogisticsDataCore.Models;
 using LogisticsProject;
@@ -33,11 +33,11 @@ namespace LogisticsEntity.ModelsFieldsValidator
                     return match.Groups[1].Value + domainName;
                 }
             }
-            catch (RegexMatchTimeoutException )
+            catch (RegexMatchTimeoutException)
             {
                 return false;
             }
-            catch (ArgumentException )
+            catch (ArgumentException)
             {
                 return false;
             }
@@ -83,9 +83,9 @@ namespace LogisticsEntity.ModelsFieldsValidator
         public bool IsValidPhone(string phone)
         {
 
-            if (phone != null) 
+            if (phone != null)
                 return Regex.IsMatch(phone, RegexConstants.PhoneRegex);
-            else 
+            else
                 return false;
         }
 
@@ -130,6 +130,17 @@ namespace LogisticsEntity.ModelsFieldsValidator
                 StatusCode = 200;
                 return registerErrorsModel;
             }
+        }
+
+        public bool IsValidRole(string Role, string Email)
+        {
+            if (Email is null)
+                return false;
+
+            if (Role == RoleConstants.AdminRole || Role == RoleConstants.LogisticRoleRole || Role == RoleConstants.BranchManagerRole)
+                return true;
+            else
+                return false;
         }
 
     }

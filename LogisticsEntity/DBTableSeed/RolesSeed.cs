@@ -1,4 +1,5 @@
-﻿using LogisticsDataCore.Tables;
+﻿using LogisticsDataCore.Constants;
+using LogisticsDataCore.Tables;
 using Microsoft.EntityFrameworkCore;
 
 namespace LogisticsEntity.DBTableSeed
@@ -8,9 +9,24 @@ namespace LogisticsEntity.DBTableSeed
         public void SeedRoles()
         {
             modelBuilder.Entity<Role>().HasData(
-                   new Role() { RoleName = "Admin", RoleDescription = "Has All The privileges for the current tenant.", RoleID = 1 },
-                   new Role() { RoleName = "Branch Manager", RoleDescription = "Has All The privileges for the current Branch.", RoleID = 2 },
-                   new Role() { RoleName = "Logistic", RoleDescription = "Can see the materials which is lacking in the branches.", RoleID = 3 }
+                   new Role()
+                   {
+                       RoleName = RoleConstants.AdminRole,
+                       RoleDescription = RoleConstants.AdminRoleDesc,
+                       RoleID = 1
+                   },
+                   new Role()
+                   {
+                       RoleName = RoleConstants.BranchManagerRole,
+                       RoleDescription = RoleConstants.BranchManagerRoleDesc,
+                       RoleID = 2
+                   },
+                   new Role()
+                   {
+                       RoleName = RoleConstants.LogisticRoleRole,
+                       RoleDescription = RoleConstants.LogisticRoleRoleDesc,
+                       RoleID = 3
+                   }
 
             );
         }

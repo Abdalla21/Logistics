@@ -294,6 +294,9 @@ namespace LogisticsEntity.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("IsAccepted")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsVerified")
                         .HasColumnType("bit");
 
@@ -327,14 +330,14 @@ namespace LogisticsEntity.Migrations
                         {
                             UserID = 1,
                             Age = 26,
-                            CreatedDateTime = "4/20/2024 5:26:56 AM",
+                            CreatedDateTime = "4/20/2024 5:18:47 PM",
                             Email = "abdalla.ahly@gmail.com",
                             IsVerified = true,
-                            PasswordHash = "$2a$11$JBA94piPMr41MMcYECIJWOYZA8m1KsHBrdtWEeYhba/XP4Vxw6Vcy",
+                            PasswordHash = "$2a$11$RxRYtMbeu/P/MCYgenCCmOSLkKJvdNx14HzpJNEfcLBHgcwJwOYUm",
                             Phone = "01096796098",
                             Role = "Admin",
                             UserName = "Admin",
-                            VerificationCodeExpireDate = new DateTime(2024, 4, 20, 5, 36, 56, 218, DateTimeKind.Local).AddTicks(9676)
+                            VerificationCodeExpireDate = new DateTime(2024, 4, 20, 17, 28, 47, 14, DateTimeKind.Local).AddTicks(8246)
                         });
                 });
 
