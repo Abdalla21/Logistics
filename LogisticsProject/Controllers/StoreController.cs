@@ -3,6 +3,7 @@ using LogisticsDataCore.DTOs;
 using LogisticsDataCore.DTOsConverter;
 using LogisticsDataCore.Interfaces.IUnitOfWork;
 using LogisticsDataCore.Models;
+using LogisticsDataCore.Tables;
 using LogisticsEntity.ModelsFieldsValidator;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

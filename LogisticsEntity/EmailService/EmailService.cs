@@ -8,12 +8,12 @@ namespace LogisticsEntity.EmailService
     public class EmailService : IEmailService
     {
 
-        public async Task SendEmailAsync(string email, string subject, string message, string password)
+        public async Task SendEmailAsync(string email, string subject, string message, string Senderpassword)
         {
 
             using (MailMessage mail = new MailMessage())
             {
-                mail.From = new MailAddress(EmailConstants.Email);
+                mail.From = new MailAddress(EmailConstants.SenderEmail);
                 mail.To.Add(email);
                 mail.Subject = subject;
                 mail.Body = message;
@@ -29,13 +29,11 @@ namespace LogisticsEntity.EmailService
                              return true; // **** Always accept
                          };
                     smtp.UseDefaultCredentials = false;
-                    smtp.Credentials = new NetworkCredential(EmailConstants.Email, password);
+                    smtp.Credentials = new NetworkCredential(EmailConstants.SenderEmail, Senderpassword);
                     smtp.EnableSsl = true;
                     await smtp.SendMailAsync(mail);
                 }
             }
-
-
             return;
         }
 

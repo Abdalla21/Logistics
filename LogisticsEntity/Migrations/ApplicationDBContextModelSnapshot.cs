@@ -22,7 +22,7 @@ namespace LogisticsEntity.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("LogisticsDataCore.Models.Category", b =>
+            modelBuilder.Entity("LogisticsDataCore.Tables.Category", b =>
                 {
                     b.Property<int>("CategoryID")
                         .ValueGeneratedOnAdd()
@@ -43,7 +43,7 @@ namespace LogisticsEntity.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("LogisticsDataCore.Models.Governorate", b =>
+            modelBuilder.Entity("LogisticsDataCore.Tables.Governorate", b =>
                 {
                     b.Property<int>("GovernorateID")
                         .ValueGeneratedOnAdd()
@@ -58,9 +58,146 @@ namespace LogisticsEntity.Migrations
                     b.HasKey("GovernorateID");
 
                     b.ToTable("Governorates");
+
+                    b.HasData(
+                        new
+                        {
+                            GovernorateID = 1,
+                            GovernorateName = "Alexandria"
+                        },
+                        new
+                        {
+                            GovernorateID = 2,
+                            GovernorateName = "Aswan"
+                        },
+                        new
+                        {
+                            GovernorateID = 3,
+                            GovernorateName = "Asyut"
+                        },
+                        new
+                        {
+                            GovernorateID = 4,
+                            GovernorateName = "Beheira"
+                        },
+                        new
+                        {
+                            GovernorateID = 5,
+                            GovernorateName = "Beni Suef"
+                        },
+                        new
+                        {
+                            GovernorateID = 6,
+                            GovernorateName = "Cairo"
+                        },
+                        new
+                        {
+                            GovernorateID = 7,
+                            GovernorateName = "Dakahlia"
+                        },
+                        new
+                        {
+                            GovernorateID = 8,
+                            GovernorateName = "Damietta"
+                        },
+                        new
+                        {
+                            GovernorateID = 9,
+                            GovernorateName = "Faiyum"
+                        },
+                        new
+                        {
+                            GovernorateID = 10,
+                            GovernorateName = "Gharbia"
+                        },
+                        new
+                        {
+                            GovernorateID = 11,
+                            GovernorateName = "Giza"
+                        },
+                        new
+                        {
+                            GovernorateID = 12,
+                            GovernorateName = "Ismailia"
+                        },
+                        new
+                        {
+                            GovernorateID = 13,
+                            GovernorateName = "Kafr El Sheikh"
+                        },
+                        new
+                        {
+                            GovernorateID = 14,
+                            GovernorateName = "Luxor"
+                        },
+                        new
+                        {
+                            GovernorateID = 15,
+                            GovernorateName = "Matrouh"
+                        },
+                        new
+                        {
+                            GovernorateID = 16,
+                            GovernorateName = "Minya"
+                        },
+                        new
+                        {
+                            GovernorateID = 17,
+                            GovernorateName = "Monufia"
+                        },
+                        new
+                        {
+                            GovernorateID = 18,
+                            GovernorateName = "New Valley"
+                        },
+                        new
+                        {
+                            GovernorateID = 19,
+                            GovernorateName = "North Sinai"
+                        },
+                        new
+                        {
+                            GovernorateID = 20,
+                            GovernorateName = "Port Said"
+                        },
+                        new
+                        {
+                            GovernorateID = 21,
+                            GovernorateName = "Qalyubia"
+                        },
+                        new
+                        {
+                            GovernorateID = 22,
+                            GovernorateName = "Qena"
+                        },
+                        new
+                        {
+                            GovernorateID = 23,
+                            GovernorateName = "Red Sea"
+                        },
+                        new
+                        {
+                            GovernorateID = 24,
+                            GovernorateName = "Sharqia"
+                        },
+                        new
+                        {
+                            GovernorateID = 25,
+                            GovernorateName = "Sohag"
+                        },
+                        new
+                        {
+                            GovernorateID = 26,
+                            GovernorateName = "South Sinai"
+                        },
+                        new
+                        {
+                            GovernorateID = 27,
+                            GovernorateName = "Suez"
+                        });
                 });
 
-            modelBuilder.Entity("LogisticsDataCore.Models.Role", b =>
+            modelBuilder.Entity("LogisticsDataCore.Tables.Role", b =>
                 {
                     b.Property<int>("RoleID")
                         .ValueGeneratedOnAdd()
@@ -69,6 +206,7 @@ namespace LogisticsEntity.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoleID"));
 
                     b.Property<string>("RoleDescription")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RoleName")
@@ -78,9 +216,29 @@ namespace LogisticsEntity.Migrations
                     b.HasKey("RoleID");
 
                     b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            RoleID = 1,
+                            RoleDescription = "Has All The privileges for the current tenant.",
+                            RoleName = "Admin"
+                        },
+                        new
+                        {
+                            RoleID = 2,
+                            RoleDescription = "Has All The privileges for the current Branch.",
+                            RoleName = "Branch Manager"
+                        },
+                        new
+                        {
+                            RoleID = 3,
+                            RoleDescription = "Can see the materials which is lacking in the branches.",
+                            RoleName = "Logistic"
+                        });
                 });
 
-            modelBuilder.Entity("LogisticsDataCore.Models.Store", b =>
+            modelBuilder.Entity("LogisticsDataCore.Tables.Store", b =>
                 {
                     b.Property<int>("StoreID")
                         .ValueGeneratedOnAdd()
@@ -117,7 +275,7 @@ namespace LogisticsEntity.Migrations
                     b.ToTable("Stores");
                 });
 
-            modelBuilder.Entity("LogisticsDataCore.Models.User", b =>
+            modelBuilder.Entity("LogisticsDataCore.Tables.User", b =>
                 {
                     b.Property<int>("UserID")
                         .ValueGeneratedOnAdd()
@@ -157,17 +315,32 @@ namespace LogisticsEntity.Migrations
                     b.Property<string>("VerificationCode")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("VerificationCodeExpireDate")
+                    b.Property<DateTime?>("VerificationCodeExpireDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("UserID");
 
                     b.ToTable("users");
+
+                    b.HasData(
+                        new
+                        {
+                            UserID = 1,
+                            Age = 26,
+                            CreatedDateTime = "4/20/2024 5:26:56 AM",
+                            Email = "abdalla.ahly@gmail.com",
+                            IsVerified = true,
+                            PasswordHash = "$2a$11$JBA94piPMr41MMcYECIJWOYZA8m1KsHBrdtWEeYhba/XP4Vxw6Vcy",
+                            Phone = "01096796098",
+                            Role = "Admin",
+                            UserName = "Admin",
+                            VerificationCodeExpireDate = new DateTime(2024, 4, 20, 5, 36, 56, 218, DateTimeKind.Local).AddTicks(9676)
+                        });
                 });
 
-            modelBuilder.Entity("LogisticsDataCore.Models.Store", b =>
+            modelBuilder.Entity("LogisticsDataCore.Tables.Store", b =>
                 {
-                    b.HasOne("LogisticsDataCore.Models.Governorate", null)
+                    b.HasOne("LogisticsDataCore.Tables.Governorate", null)
                         .WithMany()
                         .HasForeignKey("StoreGovernorateID")
                         .OnDelete(DeleteBehavior.Cascade)

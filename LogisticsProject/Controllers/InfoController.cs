@@ -1,5 +1,6 @@
 ﻿using LogisticsDataCore.Interfaces.IUnitOfWork;
-using LogisticsDataCore.Models;
+using LogisticsDataCore.Tables;
+using LogisticsEntity.DTOsConverter;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,7 +21,9 @@ namespace LogisticsProject.Controllers
         [HttpGet(), Authorize(Roles = "Admin")]
         public ActionResult<List<Role>> GetRoles()
         {
-            return Ok(unitOfWork.Roles.GetAll());
+            List<Role> roles = unitOfWork.Roles.GetAll();
+
+            return Ok(RoleDTOConverter.ConvertRolesToRolesDto(roles));
         }
 
 

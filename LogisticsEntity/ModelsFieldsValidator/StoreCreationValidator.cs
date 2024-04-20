@@ -2,6 +2,7 @@
 using LogisticsDataCore.DTOs;
 using LogisticsDataCore.Interfaces.IValidators;
 using LogisticsDataCore.Models;
+using LogisticsDataCore.Tables;
 
 namespace LogisticsEntity.ModelsFieldsValidator
 {

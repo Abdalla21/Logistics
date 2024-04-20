@@ -1,5 +1,6 @@
 ﻿using LogisticsDataCore.DTOs;
 using LogisticsDataCore.Models;
+using LogisticsDataCore.Tables;
 
 namespace LogisticsDataCore.Interfaces.IValidators
 {

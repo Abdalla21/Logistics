@@ -1,5 +1,5 @@
 ﻿using LogisticsDataCore.Interfaces.IRepositories;
-using LogisticsDataCore.Models;
+using LogisticsDataCore.Tables;
 
 namespace LogisticsDataCore.Interfaces.IUnitOfWork
 {

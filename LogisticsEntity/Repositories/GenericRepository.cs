@@ -21,14 +21,12 @@ namespace LogisticsEntity.Repositories
             return count;
         }
 
-        public T? GetSingle(Expression<Func<T, bool>> Match) {
+        public T GetSingle(Expression<Func<T, bool>> Match)
+        {
             var singleRecord = context.Set<T>().FirstOrDefault(Match);
 
-            if (singleRecord is not null)
-                return singleRecord;
-            else
-                return null;
-            }
+            return singleRecord!;
+        }
 
         public List<T> GetAll() => context.Set<T>().ToList();
 

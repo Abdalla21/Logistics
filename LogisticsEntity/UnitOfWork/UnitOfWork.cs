@@ -1,6 +1,6 @@
 ﻿using LogisticsDataCore.Interfaces.IRepositories;
 using LogisticsDataCore.Interfaces.IUnitOfWork;
-using LogisticsDataCore.Models;
+using LogisticsDataCore.Tables;
 using LogisticsEntity.DBContext;
 using LogisticsEntity.Repositories;
 

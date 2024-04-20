@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace LogisticsDataCore.Models
+﻿namespace LogisticsDataCore.Tables
 {
     public class User : SystemTableFields
     {
@@ -20,9 +18,9 @@ namespace LogisticsDataCore.Models
 
         public bool IsVerified { get; set; } = false;
 
-        public string? VerificationCode { get; set;}
+        public string? VerificationCode { get; set; }
 
-        public DateTime VerificationCodeExpireDate { get; set; } = DateTime.Now.AddMinutes(10);
+        public DateTime? VerificationCodeExpireDate { get; set; } = DateTime.Now.AddMinutes(10);
 
     }
 }

@@ -1,12 +1,55 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "G:\\.Net Study\\Logistics\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{90221D30-43E3-4530-8F1F-01B644912EE0}|LogisticsEntity\\LogisticsEntity.csproj|g:\\.net study\\logistics\\logisticsentity\\dbtableseed\\userseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90221D30-43E3-4530-8F1F-01B644912EE0}|LogisticsEntity\\LogisticsEntity.csproj|solutionrelative:logisticsentity\\dbtableseed\\userseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedHeight": 296,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserSeed.cs",
+              "DocumentMoniker": "G:\\.Net Study\\Logistics\\LogisticsEntity\\DBTableSeed\\UserSeed.cs",
+              "RelativeDocumentMoniker": "LogisticsEntity\\DBTableSeed\\UserSeed.cs",
+              "ToolTip": "G:\\.Net Study\\Logistics\\LogisticsEntity\\DBTableSeed\\UserSeed.cs",
+              "RelativeToolTip": "LogisticsEntity\\DBTableSeed\\UserSeed.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T04:13:26.658Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 163,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

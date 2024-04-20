@@ -2,7 +2,7 @@
 {
     public interface EmailConstants
     {
-        public static string Email = "logisticswebsite25@gmail.com";
+        public static string SenderEmail = "logisticswebsite25@gmail.com";
 
         public static int SmtpPort = 587;
 

@@ -1,5 +1,5 @@
 ﻿using LogisticsDataCore.DTOs;
-using LogisticsDataCore.Models;
+using LogisticsDataCore.Tables;
 using System;
 using System.Collections.Generic;
 using System.Linq;

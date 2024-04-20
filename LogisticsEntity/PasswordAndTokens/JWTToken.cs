@@ -3,8 +3,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.IdentityModel.Tokens.Jwt;
 using LogisticsProject;
-using LogisticsDataCore.Models;
 using LogisticsDataCore.Interfaces.IPasswordAndJWT;
+using LogisticsDataCore.Tables;
 
 namespace LogisticsEntity.PasswordAndTokens
 {

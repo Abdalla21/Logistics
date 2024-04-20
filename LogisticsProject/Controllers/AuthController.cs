@@ -9,6 +9,7 @@ using LogisticsEntity.PasswordAndTokens;
 using LogisticsEntity.Password;
 using Microsoft.AspNetCore.Mvc;
 using LogisticsEntity.DTOsConverter;
+using LogisticsDataCore.Tables;
 
 namespace LogisticsProject.Controllers
 {
@@ -17,6 +18,7 @@ namespace LogisticsProject.Controllers
     [ApiController]
     public class AuthController(IConfiguration Configuration, IUnitOfWork unitOfWork, IEmailService emailService) : ControllerBase
     {
+
 
         [HttpPost()]
         public async Task<ActionResult> Register(UserRequestDTO userRequestDTO)
@@ -42,22 +44,18 @@ namespace LogisticsProject.Controllers
             if (statusCode == 200)
             {
                 string EmailVerificationToken = EmailVerification.CreateRandomToken();
-                User userByToken;
-
-                do
-                {
-                    userByToken = unitOfWork.Users.GetSingle(u => u.VerificationCode == EmailVerificationToken);
-                } while (userByToken is not null);
 
                 User user = userRequestDTO.ConvertUserRequestDTOToUser();
                 user.VerificationCode = EmailVerificationToken;
-                unitOfWork.Users.Save(user);
-                unitOfWork.Complete();
 
                 string Password = Configuration.GetSection("EmailSender:Password").Value!;
                 await emailService.SendEmailAsync(userRequestDTO.Email, EmailConstants.Subject, EmailConstants.GetEmailVerficationMsg(EmailVerificationToken), Password);
 
                 msgModel.Message = AuthConstants.GetSuccessfullRegistrationMsg(userRequestDTO.UserName);
+
+                unitOfWork.Users.Save(user);
+                unitOfWork.Complete();
+
                 return Ok(msgModel);
             }
             else
@@ -94,8 +92,8 @@ namespace LogisticsProject.Controllers
 
             messagesModel.Message = AuthConstants.SuccessfullVerification;
             return Ok(messagesModel);
-
         }
+
 
         [HttpPost()]
         public ActionResult Login(UserResponseDTO user)
@@ -111,7 +109,7 @@ namespace LogisticsProject.Controllers
             if (userSelected.IsVerified == false)
             {
                 msgModel.Message = RegisterErrorMessagesConstants.MailNotVerified;
-                return Unauthorized();
+                return Unauthorized(msgModel);
             }
 
             PasswordHash PasswordHash = new PasswordHash();
@@ -137,6 +135,7 @@ namespace LogisticsProject.Controllers
             else
                 return Unauthorized();
         }
+
 
     }
 }

@@ -1,9 +1,9 @@
 ﻿using LogisticsDataCore.DTOs;
-using LogisticsDataCore.Models;
+using LogisticsDataCore.Tables;
 
 namespace LogisticsDataCore.DTOsConverter
 {
-    public static class StoreDTOsConverter
+    public static class StoreDTOConverter
     {
         public static Store ConvertStoreRequestDTOToStore(this StoreRequestDTO dto, int GovID, int UserID)
         {

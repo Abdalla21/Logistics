@@ -1,10 +1,10 @@
 ﻿using LogisticsDataCore.DTOs;
-using LogisticsDataCore.Models;
+using LogisticsDataCore.Tables;
 using LogisticsEntity.Password;
 
 namespace LogisticsEntity.DTOsConverter
 {
-    public static class UserDTOsConverter
+    public static class UserDTOConverter
     {
         public static User ConvertUserRequestDTOToUser(this UserRequestDTO dto)
         {

@@ -1,4 +1,5 @@
-﻿using LogisticsDataCore.Models;
+﻿using LogisticsDataCore.Tables;
+using LogisticsEntity.DBTableSeed;
 using Microsoft.EntityFrameworkCore;
 
 namespace LogisticsEntity.DBContext
@@ -13,7 +14,12 @@ namespace LogisticsEntity.DBContext
                 .HasOne<Governorate>()
                 .WithMany()
                 .HasForeignKey(store => store.StoreGovernorateID);
+
+            new DBRoleSeed(modelBuilder).SeedRoles();
+            new DBGovernoratesSeed(modelBuilder).SeedGovernorates();
+            new DBUserSeed(modelBuilder).SeedUser();
         }
+
 
         public DbSet<User> users { get; set; }
 

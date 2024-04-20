@@ -32,3 +32,4 @@ G:\.Net Study\Logistics\LogisticsDataCore\obj\Debug\net7.0\LogisticsDataCore.dll
 G:\.Net Study\Logistics\LogisticsDataCore\obj\Debug\net7.0\refint\LogisticsDataCore.dll
 G:\.Net Study\Logistics\LogisticsDataCore\obj\Debug\net7.0\LogisticsDataCore.pdb
 G:\.Net Study\Logistics\LogisticsDataCore\obj\Debug\net7.0\ref\LogisticsDataCore.dll
+G:\.Net Study\Logistics\LogisticsDataCore\obj\Debug\net7.0\LogisticsDataCore.csproj.AssemblyReference.cache

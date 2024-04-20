@@ -1,6 +1,7 @@
 ﻿using LogisticsDataCore.Constants;
 using LogisticsDataCore.Interfaces.IUnitOfWork;
 using LogisticsDataCore.Models;
+using LogisticsDataCore.Tables;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
