@@ -1,5 +1,6 @@
-Logistics is a website that company owner can register his retail branches and set up the items he is selling.
+Logistics is a website for transporting items between company branches.
 
+the company owner can register his retail branches and set up the items he is selling.
 this will give the logistic workers (people who transfer items from a branch to another) 
 an idea of the quantity of the items in each branch
 and see which items are low in quantity in each branch
