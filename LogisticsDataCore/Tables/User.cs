@@ -3,7 +3,8 @@
     public class User : SystemTableFields
     {
 
-   [Key]  [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+   [Key] 
+ [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int UserID { get; set; }
 
         public required string UserName { get; set; }
