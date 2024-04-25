@@ -3,6 +3,7 @@
     public class Store : SystemTableFields
     {
 
+   [Key] [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int StoreID { get; set; }
 
         public required string StoreName { get; set; }
