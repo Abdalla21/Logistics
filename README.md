@@ -22,4 +22,3 @@ What i used :
 8- Primary Constructor from .NET 8.
 9- Mapping models to DTOs manually (i liked to build it myself than using automapper).
 10- Password hashing.
-11- Database seeding.
