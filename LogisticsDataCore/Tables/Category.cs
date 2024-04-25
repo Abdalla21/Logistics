@@ -2,7 +2,8 @@
 {
     public class Category
     {
-
+   [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CategoryID { get; set; }
 
         public required string CategoryName { get; set; }
