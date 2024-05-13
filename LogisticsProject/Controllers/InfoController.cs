@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LogisticsProject.Controllers
 {
-
+    [ApiController]
     [Route("api/[controller]/[action]")]
     public class InfoController(IUnitOfWork unitOfWork) : ControllerBase
     {
@@ -28,7 +28,7 @@ namespace LogisticsProject.Controllers
         }
 
 
-        [HttpGet(), Authorize()]
+        [HttpGet()]
         public ActionResult<List<Governorate>> GetGovernorates()
         {
             return Ok(unitOfWork.Governorates.GetAll());

@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "G:\\.Net Study\\Logistics\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D0945F88-7AF6-4F18-8A46-881FE64653C6}|LogisticsProject\\LogisticsProject.csproj|g:\\.net study\\logistics\\logisticsproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D0945F88-7AF6-4F18-8A46-881FE64653C6}|LogisticsProject\\LogisticsProject.csproj|solutionrelative:logisticsproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0945F88-7AF6-4F18-8A46-881FE64653C6}|LogisticsProject\\LogisticsProject.csproj|g:\\.net study\\logistics\\logisticsproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0945F88-7AF6-4F18-8A46-881FE64653C6}|LogisticsProject\\LogisticsProject.csproj|solutionrelative:logisticsproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D0945F88-7AF6-4F18-8A46-881FE64653C6}|LogisticsProject\\LogisticsProject.csproj|g:\\.net study\\logistics\\logisticsproject\\controllers\\infocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D0945F88-7AF6-4F18-8A46-881FE64653C6}|LogisticsProject\\LogisticsProject.csproj|solutionrelative:logisticsproject\\controllers\\infocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,18 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D0945F88-7AF6-4F18-8A46-881FE64653C6}|LogisticsProject\\LogisticsProject.csproj|g:\\.net study\\logistics\\logisticsproject\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D0945F88-7AF6-4F18-8A46-881FE64653C6}|LogisticsProject\\LogisticsProject.csproj|solutionrelative:logisticsproject\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90221D30-43E3-4530-8F1F-01B644912EE0}|LogisticsEntity\\LogisticsEntity.csproj|g:\\.net study\\logistics\\logisticsentity\\dtosconverter\\userdtoconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90221D30-43E3-4530-8F1F-01B644912EE0}|LogisticsEntity\\LogisticsEntity.csproj|solutionrelative:logisticsentity\\dtosconverter\\userdtoconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A02E2529-C310-4DC9-ACB8-3227D40C8CDB}|LogisticsDataCore\\LogisticsDataCore.csproj|g:\\.net study\\logistics\\logisticsdatacore\\tables\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A02E2529-C310-4DC9-ACB8-3227D40C8CDB}|LogisticsDataCore\\LogisticsDataCore.csproj|solutionrelative:logisticsdatacore\\tables\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90221D30-43E3-4530-8F1F-01B644912EE0}|LogisticsEntity\\LogisticsEntity.csproj|g:\\.net study\\logistics\\logisticsentity\\modelsassigner\\modelsassigner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90221D30-43E3-4530-8F1F-01B644912EE0}|LogisticsEntity\\LogisticsEntity.csproj|solutionrelative:logisticsentity\\modelsassigner\\modelsassigner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 296,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,78 +42,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ModelsAssigner.cs",
-              "DocumentMoniker": "G:\\.Net Study\\Logistics\\LogisticsEntity\\ModelsAssigner\\ModelsAssigner.cs",
-              "RelativeDocumentMoniker": "LogisticsEntity\\ModelsAssigner\\ModelsAssigner.cs",
-              "ToolTip": "G:\\.Net Study\\Logistics\\LogisticsEntity\\ModelsAssigner\\ModelsAssigner.cs",
-              "RelativeToolTip": "LogisticsEntity\\ModelsAssigner\\ModelsAssigner.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T15:14:37.926Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "StoreController.cs",
-              "DocumentMoniker": "G:\\.Net Study\\Logistics\\LogisticsProject\\Controllers\\StoreController.cs",
-              "RelativeDocumentMoniker": "LogisticsProject\\Controllers\\StoreController.cs",
-              "ToolTip": "G:\\.Net Study\\Logistics\\LogisticsProject\\Controllers\\StoreController.cs",
-              "RelativeToolTip": "LogisticsProject\\Controllers\\StoreController.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAgwEEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T15:05:32.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "InfoController.cs",
-              "DocumentMoniker": "G:\\.Net Study\\Logistics\\LogisticsProject\\Controllers\\InfoController.cs",
-              "RelativeDocumentMoniker": "LogisticsProject\\Controllers\\InfoController.cs",
-              "ToolTip": "G:\\.Net Study\\Logistics\\LogisticsProject\\Controllers\\InfoController.cs",
-              "RelativeToolTip": "LogisticsProject\\Controllers\\InfoController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAABIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T15:05:26.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "User.cs",
-              "DocumentMoniker": "G:\\.Net Study\\Logistics\\LogisticsDataCore\\Tables\\User.cs",
-              "RelativeDocumentMoniker": "LogisticsDataCore\\Tables\\User.cs",
-              "ToolTip": "G:\\.Net Study\\Logistics\\LogisticsDataCore\\Tables\\User.cs",
-              "RelativeToolTip": "LogisticsDataCore\\Tables\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T14:24:18.133Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserDTOConverter.cs",
-              "DocumentMoniker": "G:\\.Net Study\\Logistics\\LogisticsEntity\\DTOsConverter\\UserDTOConverter.cs",
-              "RelativeDocumentMoniker": "LogisticsEntity\\DTOsConverter\\UserDTOConverter.cs",
-              "ToolTip": "G:\\.Net Study\\Logistics\\LogisticsEntity\\DTOsConverter\\UserDTOConverter.cs",
-              "RelativeToolTip": "LogisticsEntity\\DTOsConverter\\UserDTOConverter.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAgwBcAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T14:21:29.861Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "G:\\.Net Study\\Logistics\\LogisticsProject\\appsettings.json",
+              "RelativeDocumentMoniker": "LogisticsProject\\appsettings.json",
+              "ToolTip": "G:\\.Net Study\\Logistics\\LogisticsProject\\appsettings.json",
+              "RelativeToolTip": "LogisticsProject\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-13T11:12:09.131Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "InfoController.cs",
+              "DocumentMoniker": "G:\\.Net Study\\Logistics\\LogisticsProject\\Controllers\\InfoController.cs",
+              "RelativeDocumentMoniker": "LogisticsProject\\Controllers\\InfoController.cs",
+              "ToolTip": "G:\\.Net Study\\Logistics\\LogisticsProject\\Controllers\\InfoController.cs",
+              "RelativeToolTip": "LogisticsProject\\Controllers\\InfoController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T11:08:07.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StoreController.cs",
+              "DocumentMoniker": "G:\\.Net Study\\Logistics\\LogisticsProject\\Controllers\\StoreController.cs",
+              "RelativeDocumentMoniker": "LogisticsProject\\Controllers\\StoreController.cs",
+              "ToolTip": "G:\\.Net Study\\Logistics\\LogisticsProject\\Controllers\\StoreController.cs",
+              "RelativeToolTip": "LogisticsProject\\Controllers\\StoreController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T23:06:57.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "UserController.cs",
               "DocumentMoniker": "G:\\.Net Study\\Logistics\\LogisticsProject\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "LogisticsProject\\Controllers\\UserController.cs",
               "ToolTip": "G:\\.Net Study\\Logistics\\LogisticsProject\\Controllers\\UserController.cs",
               "RelativeToolTip": "LogisticsProject\\Controllers\\UserController.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAQwCsAAAA+AAAA",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAcwDAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T14:07:34.675Z",
+              "WhenOpened": "2024-04-21T23:03:35.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\.Net Study\\Logistics\\LogisticsProject\\Program.cs",
+              "RelativeDocumentMoniker": "LogisticsProject\\Program.cs",
+              "ToolTip": "G:\\.Net Study\\Logistics\\LogisticsProject\\Program.cs",
+              "RelativeToolTip": "LogisticsProject\\Program.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAAEIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T17:13:42Z",
               "EditorCaption": ""
             }
           ]

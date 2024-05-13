@@ -1,3 +1,4 @@
+using AspNetCoreRateLimit;
 using LogisticsDataCore.Interfaces.IEmailService;
 using LogisticsDataCore.Interfaces.IUnitOfWork;
 using LogisticsEntity.DBContext;
@@ -5,6 +6,7 @@ using LogisticsEntity.EmailService;
 using LogisticsEntity.UnitOfWork;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
@@ -26,6 +28,18 @@ builder.Services.AddCors(options =>
             .AllowAnyHeader();
         });
 });
+
+#region RateLimit
+
+builder.Services.AddMemoryCache();
+builder.Services.Configure<IpRateLimitOptions>(builder.Configuration.GetSection("IpRateLimiting"));
+builder.Services.Configure<IpRateLimitPolicies>(builder.Configuration.GetSection("IpRateLimitPolicies"));
+builder.Services.AddSingleton<IProcessingStrategy, AsyncKeyLockProcessingStrategy>();
+builder.Services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
+builder.Services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
+builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
+
+#endregion
 
 #region DB Context
 
@@ -81,6 +95,7 @@ var app = builder.Build();
 app.UseExceptionHandler("/error");
 app.UseHsts();
 
+app.UseIpRateLimiting();
 app.UseSwagger();
 app.UseSwaggerUI();
 
