@@ -17,7 +17,7 @@ and deliver it to the requesting branch.
 ### 2. Dependency Injection.
 ### 3. Repository and Unit of work patterns.
 ### 4. Simple Clean Architicture.
-### 5. Made the Roles feature from the start.
+### 5. Made the Roles feature from the start instead of using identity.
 ### 6. Authentication using JWT Token and Authorization.
 ### 7. Sending emails using SMTP.
 ### 8. Primary Constructor from .NET 8.
